@@ -12,7 +12,7 @@ const raisedToTheThird = (arr) => {
   // Solution code here...
   let nArr= [];
   arr.forEach(element => {
-    nArr.push(Math.Math.pow(element,3));
+    nArr.push(Math.pow(element,3));
 
   });
   return nArr ;
@@ -28,8 +28,7 @@ Write a function that appends ' The end.' to a string, and returns the modified 
 
 const appendTheEnd = (str) => {
   // Solution code here...
-  str += 'The end.';
-  return str;
+  return str + ' The end.';
 };
 
 /* ------------------------------------------------------------------------------------------------
