@@ -127,12 +127,7 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  arr.sort(function (a, b) {
-    if (a.price < b.price) return 1;
-    if (b.price < a.price) return -1;
-
-    return 0;
-  });
+  arr.sort((a,b) => a.price - b.price);
 
   return arr;
 };
