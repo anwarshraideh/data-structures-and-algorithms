@@ -71,7 +71,7 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  result.forEach(element => {
+  str.forEach(element => {
     result.push(str.slice(element , str.length));
   });
   return result;
@@ -87,8 +87,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  return arr.split(' ');
-
+  return arr.split('');
+  
 };
 
 
