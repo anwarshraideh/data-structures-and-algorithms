@@ -93,6 +93,7 @@ const checkValues = (obj, value) => {
   // Solution code here...
   let objValues = Object.values(obj);
   let checkValue = false;
+  
   objValues.forEach((element) => {
     if(element === value) {
       checkValue = true;
@@ -173,7 +174,7 @@ const hasChildrenValues = (arr, character) => {
 
     if (element.name === character) {
       let check = element.children.length > 0;
-      checkChildren =check;
+      checkChildren = check;
     }
   });
   return checkChildren ;
