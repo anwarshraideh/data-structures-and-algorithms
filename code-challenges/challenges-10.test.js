@@ -25,10 +25,10 @@ Returns: ['dyoll', 'eimaj'];
 const getNames = (arr) => {
   // Solution code here...
 
-  let reversed=arr.map(Element=>{
-    return Element.name.split('').reverse().join('');
+  let reversedArray = arr.map(element=>{
+    return element.name.split('').reverse().join('');
   });
-  return reversed;
+  return reversedArray;
 
 };
 
@@ -45,6 +45,7 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 const count = (target, input) => {
   // Solution code here...
 
+  
 
 };
 
