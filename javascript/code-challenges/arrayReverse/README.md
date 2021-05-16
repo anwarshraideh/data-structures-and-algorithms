@@ -5,7 +5,7 @@ Write a function called reverseArray which takes an array as an argument. Withou
 
 ## Whiteboard Process
 
-![reversedarr](../../images/challenge1reversedArr.png)
+![reversedarr](../../../images/challenge1reversedArr.png)
 
 
 ## Approach & Efficiency
