@@ -44,7 +44,7 @@ describe('Linked List', () => {
     list.insert(5);
     list.insert(57);
 
-    expect(list.toString()).toEqual('{3} ->{2} ->{1} ->NULL');
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->NULL');
   });
 
 });
