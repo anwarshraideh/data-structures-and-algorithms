@@ -3,7 +3,6 @@
 // Require our linked list implementation
 const LinkedList = require('../linked-list');
 let list = new LinkedList();
-let newList = new LinkedList();
 
 describe('Linked List', () => {
 
@@ -31,18 +30,9 @@ describe('Linked List', () => {
     expect(list.includes(20)).toBeFalsy();
   });
 
-  // it('should return a collection of all the values that exist in the linked list', () => {
-  //   expect(typeof list.toString()).toBe('string');
-  //   expect(list.toString()).toMatch(/(NULL)/gi);
-  //   expect(list.toString()).toBe('{ 57 } -> { 5 } -> { 13 } -> NULL');
-  //   expect(newList.toString()).toBe('empty');
-  // });
+
 
   it('return String of the nodes on the linked list', () => {
-
-    // list.insert(13);
-    // list.insert(5);
-    // list.insert(57);
 
     expect(list.toString()).toEqual('{57} ->{5} ->{13} ->NULL');
   });
