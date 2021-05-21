@@ -35,7 +35,7 @@ describe('Linked List', () => {
     expect(typeof list.toString()).toBe('string');
     expect(list.toString()).toMatch(/(NULL)/gi);
     expect(list.toString()).toBe('{ 57 } -> { 5 } -> { 13 } -> NULL');
-    expect(newList.toString()).toBe('empty list');
+    expect(newList.toString()).toBe('empty');
   });
 
 
