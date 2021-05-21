@@ -40,9 +40,9 @@ describe('Linked List', () => {
 
   it('return String of the nodes on the linked list', () => {
 
-    list.insert(13);
-    list.insert(5);
-    list.insert(57);
+    // list.insert(13);
+    // list.insert(5);
+    // list.insert(57);
 
     expect(list.toString()).toEqual('{57} ->{5} ->{13} ->NULL');
   });
