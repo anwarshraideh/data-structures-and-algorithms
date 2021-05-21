@@ -12,8 +12,8 @@ describe('Linked List', () => {
   });
 
   it('should head property will to the first node in the linked list', () => {
-    list.insert(15);
-    expect(list.head.value).toBe(15);
+    list.insert(13);
+    expect(list.head.value).toBe(13);
     expect(list.head.next).toBeNull();
   });
 
@@ -34,7 +34,7 @@ describe('Linked List', () => {
   it('should return a collection of all the values that exist in the linked list', () => {
     expect(typeof list.toString()).toBe('string');
     expect(list.toString()).toMatch(/(NULL)/gi);
-    expect(list.toString()).toBe('{ 57 } -> { 5 } -> { 15 } -> NULL');
+    expect(list.toString()).toBe('{ 57 } -> { 5 } -> { 13 } -> NULL');
     expect(newList.toString()).toBe('empty list');
   });
 
