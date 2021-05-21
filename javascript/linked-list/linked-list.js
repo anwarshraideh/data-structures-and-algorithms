@@ -32,25 +32,37 @@ class LinkedList {
     return false;
   }
 
+  // toString() {
+
+  //   let linkedlistString = '';
+  //   if (!this.head)
+  //     linkedlistString = 'empty';
+  //   else
+  //   {
+
+  //     let node = this.head;
+  //     linkedlistString = `{ ${node.value} } -> `;
+  //     while (node.next) {
+  //       node = node.next;
+  //       linkedlistString += `{ ${node.value} } -> `;
+  //     }
+  //     linkedlistString += `NULL`;
+
+  //   }
+  //   return linkedlistString;
+  // }
+
   toString() {
-
-    let linkedlistString = '';
-    if (!this.head)
-      linkedlistString = 'empty';
-    else
-    {
-
-      let node = this.head;
-      linkedlistString = `{ ${node.value} } -> `;
-      while (node.next) {
-        node = node.next;
-        linkedlistString += `{ ${node.value} } -> `;
-      }
-      linkedlistString += `NULL`;
-
+    let lastNode = this.head;
+    let listString = '';
+    while (lastNode) {
+      listString += `{${lastNode.value}} ->`;
+      lastNode = lastNode.next;
     }
-    return linkedlistString;
+    listString += `NULL`;
+    return listString;
   }
+
 }
 
 module.exports = LinkedList;
