@@ -4,7 +4,7 @@ Write a function called insertShiftArray which takes in an array and a value to 
 
 ## Whiteboard Process
 
-![arrayShift](../../../images/shifarr.png)
+![arrayShift](../../../images/shifarrfinal.png)
 
 
 ## Approach & Efficiency
