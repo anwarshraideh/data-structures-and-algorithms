@@ -4,10 +4,9 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 
 ## Whiteboard Process
 
-![binarySearcharr](../../../images/binarySearch1.png)
+![binarySearcharr](../../../images/binarySearch.png)
 
 
 ## Approach & Efficiency
 
 it's only work if the array is already sorted so if we face an array not sorted we need to sort it first then use the binary search
-
