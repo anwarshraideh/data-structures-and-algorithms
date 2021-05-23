@@ -46,23 +46,16 @@ describe('Ll insertion', () => {
   it('append a value to the end of linked list', () => {
 
 
-    list.insert(1);
-    list.insert(2);
-    list.insert(3);
-
     list.append(4);
-    expect(list.toString()).toEqual('{3} ->{2} ->{1} ->{4} ->NULL');
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{4} ->NULL');
   });
 
   it('append multible value to the end of linked list', () => {
 
-    list.insert(1);
-    list.insert(2);
-    list.insert(3);
 
     list.append(4);
     list.append(5);
-    expect(list.toString()).toEqual('{3} ->{2} ->{1} ->{4} ->{5} ->NULL');
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{4} ->{5} ->NULL');
   });
 
 
