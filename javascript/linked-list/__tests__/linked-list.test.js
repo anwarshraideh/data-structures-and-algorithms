@@ -61,14 +61,14 @@ describe('Ll insertion', () => {
   it('Can successfully insert after a node in the middle of the linked list', () => {
 
     list.insertAfter(13, 90);
-    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{90}->{4} ->{6} ->{7} ->NULL');
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{90} ->{4} ->{6} ->{7} ->NULL');
   });
 
   it('Can successfully insert a node after the last node of the linked list', () => {
 
     list.insertAfter(7, 20);
 
-    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{4} ->{6} ->{7} ->{20} ->NULL');
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{90} ->{4} ->{6} ->{7} ->{20} ->NULL');
   });
 
 });
