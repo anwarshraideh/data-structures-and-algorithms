@@ -60,8 +60,22 @@ class LinkedList {
     }
   }
 
-  
- 
+  insertAfter(value, newVal) {
+    let node = new Node(newVal);
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        let temp = current.next;
+        current.next = node;
+        node.next = temp;
+        // this.length++;
+        return;
+      }
+      current = current.next;
+    }
+    return 'Value doesn\'t exist';
+  }
+
 
 
 }
