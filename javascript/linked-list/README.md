@@ -37,4 +37,3 @@ The linked list code contains two classes, Node class, and LinkedList class that
 
 
 ![ll-insertion](../../images/codechallenge66.png)
-
