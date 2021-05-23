@@ -55,7 +55,7 @@ describe('Ll insertion', () => {
 
     list.append(6);
     list.append(7);
-    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{4} ->{5} ->NULL');
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{4} ->{6} ->{7} ->NULL');
   });
 
 
