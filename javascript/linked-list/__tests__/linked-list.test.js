@@ -38,3 +38,27 @@ describe('Linked List', () => {
   });
 
 });
+
+
+describe('Ll insertion', () => {
+
+
+  it('append a value to the end of linked list', () => {
+
+
+    list.append(4);
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{4} ->NULL');
+  });
+
+  it('append multible value to the end of linked list', () => {
+
+
+    list.append(6);
+    list.append(7);
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{4} ->{6} ->{7} ->NULL');
+  });
+
+
+});
+
+
