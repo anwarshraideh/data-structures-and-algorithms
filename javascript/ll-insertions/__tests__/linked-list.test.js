@@ -7,26 +7,26 @@ let list = new LinkedList();
 
 describe('LL Insertions', () => {
   it('append a value to the end of linked list', () => {
-    let valueOne = new Node(1);
-    let valueTwo = new Node(2);
-    let valueThree = new Node(3);
+    // let valueOne = new Node(1);
+    // let valueTwo = new Node(2);
+    // let valueThree = new Node(3);
 
-    list.insert(valueOne);
-    list.insert(valueTwo);
-    list.insert(valueThree);
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
 
     list.append(4);
     expect(list.toString()).toEqual('{3} ->{2} ->{1} ->{4} ->NULL');
 
   });
   it('should append multible value to the end of linked list', () => {
-    let valueOne = new Node(1);
-    let valueTwo = new Node(2);
-    let valueThree = new Node(3);
+    // let valueOne = new Node(1);
+    // let valueTwo = new Node(2);
+    // let valueThree = new Node(3);
 
-    list.insert(valueOne);
-    list.insert(valueTwo);
-    list.insert(valueThree);
+    list.insert(1);
+    list.insert(2);
+    list.insert(3);
 
     list.append(4);
     list.append(5);
