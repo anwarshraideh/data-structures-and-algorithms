@@ -49,14 +49,12 @@ class LinkedList {
     let node = new Node(value);
     if (!this.head) {
       this.head = node;
-      // this.length++;
     } else {
       let lastNode = this.head;
       while (lastNode.next) {
         lastNode = lastNode.next;
       }
       lastNode.next = node;
-      // this.length++;
     }
   }
 
@@ -68,14 +66,27 @@ class LinkedList {
         let temp = current.next;
         current.next = node;
         node.next = temp;
-        // this.length++;
         return;
       }
       current = current.next;
     }
-    return 'Value doesn\'t exist';
+    return 'not exist';
   }
 
+  insertBefore(value, newVal) {
+    let node = new Node(newVal);
+    let current = this.head;
+    while (current && current.next !== null) {
+      if (current.next.value === value) {
+        let temp = current.next;
+        current.next = node;
+        node.next = temp;
+        return;
+      }
+      current = current.next;
+    }
+    return 'not exist';
+  }
 
 
 }
