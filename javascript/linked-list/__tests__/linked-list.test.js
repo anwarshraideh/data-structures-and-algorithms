@@ -74,13 +74,13 @@ describe('Ll insertion', () => {
   it('Can successfully insert a node before a node located i the middle of a linked list', () => {
 
     list.insertBefore(4, 10);
-    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{90}  ->{10} ->{4} ->{6} ->{7} ->{20} ->NULL');
+    expect(list.toString()).toEqual('{57} ->{5} ->{13} ->{90} ->{10} ->{4} ->{6} ->{7} ->{20} ->NULL');
   });
 
   it('Can successfully insert a node before the first node of a linked list', () => {
 
     list.insertBefore(57, 1);
-    expect(list.toString()).toEqual('{1} ->{57} ->{5} ->{13} ->{90}  ->{10} ->{4} ->{6} ->{7} ->{20} ->NULL');
+    expect(list.toString()).toEqual('{1} ->{57} ->{5} ->{13} ->{90} ->{10} ->{4} ->{6} ->{7} ->{20} ->NULL');
   });
 
 });
