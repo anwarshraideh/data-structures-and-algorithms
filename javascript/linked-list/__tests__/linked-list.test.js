@@ -101,7 +101,7 @@ describe('Ll insertion', () => {
     let linkedList = new LinkedList();
     linkedList.insert(1);
 
-    expect(linkedList.kthFromEnd(0)).toEqual(1);
+    expect(linkedList.kthFromEnd(1)).toEqual(1);
   });
 
 });
