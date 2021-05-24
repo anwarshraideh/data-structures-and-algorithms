@@ -87,4 +87,9 @@ describe('Ll insertion', () => {
     expect(list.kthFromEnd(11)).toEqual('Exception');
   });
 
+  it(' k and the length of the list are the same', () => {
+
+    expect(list.kthFromEnd(9)).toEqual('Exception');
+  });
+
 });
