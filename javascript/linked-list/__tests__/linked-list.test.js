@@ -97,9 +97,9 @@ describe('Ll insertion', () => {
     expect(list.kthFromEnd(-6)).toEqual('Exception');
   });
   it(' linked list is of a size 1', () => {
-    let valueOne = new Node(1);
+
     let linkedList = new LinkedList();
-    linkedList.insert(valueOne);
+    linkedList.insert(1);
 
     expect(linkedList.kthFromEnd(0)).toEqual(1);
   });
