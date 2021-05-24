@@ -33,7 +33,7 @@ The linked list code contains two classes, Node class, and LinkedList class that
 6- insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 
 
-![ll](../../images/llwhiteboard.png)
+![ll](../../images/llwhiteboard1.png)
 
 
 ![ll-insertion](../../images/codechallenge66.png)
