@@ -80,7 +80,7 @@ describe('Ll insertion', () => {
 });
 
 
-describe('Ll insertion', () => {
+describe('Ll kthFromEnd', () => {
 
   it(' k is greater than the length of the linked list', () => {
 
@@ -92,4 +92,10 @@ describe('Ll insertion', () => {
     expect(list.kthFromEnd(9)).toEqual('Exception');
   });
 
+  it(' k is not a positive integer', () => {
+
+    expect(list.kthFromEnd(-6)).toEqual('Exception');
+  });
+
 });
+
