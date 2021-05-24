@@ -92,4 +92,16 @@ describe('Ll insertion', () => {
     expect(list.kthFromEnd(9)).toEqual('Exception');
   });
 
+  test(' k is not a positive integer', () => {
+
+    expect(list.kthFromEnd(-6)).toEqual('Exception');
+  });
+  it('should find kth value in a linked list if the linked list is of a size 1', () => {
+    let newList = new LinkedList();
+    newList.append(10);
+    expect(newList.kthFromEnd(0)).toEqual(10);
+    expect(newList.kthFromEnd(1)).toEqual('Exception');
+  });
+
 });
+
