@@ -80,7 +80,7 @@ describe('Ll insertion', () => {
 });
 
 
-describe('Ll insertion', () => {
+describe('Ll kthFromEnd', () => {
 
   it(' k is greater than the length of the linked list', () => {
 
@@ -95,13 +95,6 @@ describe('Ll insertion', () => {
   it(' k is not a positive integer', () => {
 
     expect(list.kthFromEnd(-6)).toEqual('Exception');
-  });
-  it(' linked list is of a size 1', () => {
-
-    let linkedList = new LinkedList();
-    linkedList.insert(1);
-
-    expect(linkedList.kthFromEnd(1)).toEqual(1);
   });
 
 });
