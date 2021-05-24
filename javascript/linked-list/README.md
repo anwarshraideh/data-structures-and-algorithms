@@ -35,7 +35,11 @@ The linked list code contains two classes, Node class, and LinkedList class that
 6- insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
 7- kthFromEnd: accept an index and return the value of the node from the end
 
+
+
 ![ll](../../images/llwhiteboard1.png)
+
+
 
 ![ll-insertion](../../images/codechallenge66.png)
 
