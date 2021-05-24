@@ -80,3 +80,11 @@ describe('Ll insertion', () => {
 });
 
 
+describe('Ll insertion', () => {
+
+  it(' k is greater than the length of the linked list', () => {
+
+    expect(list.kthFromEnd(11)).toEqual('Exception');
+  });
+
+});
