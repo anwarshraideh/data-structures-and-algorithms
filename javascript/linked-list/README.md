@@ -24,5 +24,5 @@ The linked list code contains two classes, Node class, and LinkedList class that
 3- toString method:  which takes in no arguments and returns a string representing all the values in the Linked List 
 
 
-![ll](../../images/llwhiteboard.png)
+![ll](../../images/llwhiteboard1.png)
 
