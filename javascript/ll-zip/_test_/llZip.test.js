@@ -30,7 +30,7 @@ describe('Linked Lists', () => {
 
 describe('Linked Lists Zip', () => {
   it('make sure lists are zipped correctly', () => {
-    expect(zipLists(list1, list2).toString()).toBe('{ 10 } -> { 15 } -> { 20 } -> { 25 } -> { 30 } -> { 35 } -> NULL');
+    expect(zipLists(list1, list2).toString()).toBe('{10} ->{15} ->{20} ->{25} ->{30} ->{35} ->NULL');
     list1.append(40);
     expect(zipLists(list1, list2).toString()).toBe('{ 10 } -> { 15 } -> { 20 } -> { 25 } -> { 30 } -> { 35 } -> { 40 } -> NULL');
     list2.append(45);
