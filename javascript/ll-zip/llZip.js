@@ -1,6 +1,6 @@
 'use strict';
 
-const LinkedList = require('../../javascript/linked-list/linked-list');
+const LinkedList = require('../../javascript/linked-list/linked-list.js');
 
 
 function zipLists(list1, list2) {

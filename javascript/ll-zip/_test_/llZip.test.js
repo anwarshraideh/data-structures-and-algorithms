@@ -1,7 +1,7 @@
 'use strict';
 
 // Require our linked list implementation
-const LinkedList = require('../../javascript/linked-list/linked-list');
+const LinkedList = require('../../javascript/linked-list/linked-list.js');
 const zipLists = require('../llZip');
 let list1 = new LinkedList();
 let list2 = new LinkedList();
