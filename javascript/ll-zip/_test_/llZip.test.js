@@ -32,10 +32,10 @@ describe('Linked Lists Zip', () => {
   it('make sure lists are zipped correctly', () => {
     expect(zipLists(list1, list2).toString()).toBe('{10} ->{15} ->{20} ->{25} ->{30} ->{35} ->NULL');
     list1.append(40);
-    expect(zipLists(list1, list2).toString()).toBe('{ 10 } -> { 15 } -> { 20 } -> { 25 } -> { 30 } -> { 35 } -> { 40 } -> NULL');
+    expect(zipLists(list1, list2).toString()).toBe('{10} ->{15} ->{20} ->{25} ->{30} ->{35} ->{40} ->NULL');
     list2.append(45);
     list2.append(55);
-    expect(zipLists(list1, list2).toString()).toBe('{ 10 } -> { 15 } -> { 20 } -> { 25 } -> { 30 } -> { 35 } -> { 40 } -> { 45 } -> { 55 } -> NULL');
+    expect(zipLists(list1, list2).toString()).toBe('{10} ->{15} ->{20} ->{25} ->{30} ->{35} ->{40} ->{45} ->{55} ->NULL');
     console.log('__list 1__', list1.toString());
     console.log('__list 2__', list2.toString());
     console.log('__zipped list__', zipLists(list1, list2).toString());
