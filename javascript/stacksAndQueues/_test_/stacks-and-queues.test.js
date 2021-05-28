@@ -1,7 +1,9 @@
 'use strict';
 
-const {Stack} = require('../stacks-and-queues');
+const { Stack } = require('../stacks-and-queues');
 const stack = new Stack();
+
+
 describe ('stack testing',()=>{
 
   it('Can successfully push onto a stack',()=>{
@@ -11,7 +13,7 @@ describe ('stack testing',()=>{
   });
 
   it('Can successfully push multiple values onto a stack',()=>{
-    // let stack = new Stack();
+
     stack.push(1);
     stack.push(2);
     stack.push(3);

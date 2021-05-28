@@ -10,7 +10,7 @@ class Node
 
 class Stack {
 
-  constructor(){
+  constructor() {
     this.top = null;
   }
 
@@ -67,7 +67,7 @@ class Stack {
 
 }
 
-module.exports = Stack ;
+module.exports = {Stack} ;
 
 
 
