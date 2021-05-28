@@ -67,7 +67,55 @@ class Stack {
 
 }
 
-module.exports = {Stack} ;
+class Queue {
+
+  constructor (){
+    this.front =null;
+    this.rear = null;
+  }
+
+  enqueue(value){
+    let node = new Node(value);
+    if (this.isEmpty())
+    {
+      this.front =node;
+      this.rear = node;
+    }
+    else{
+      this.rear.next = node;
+      this.rear = node;
+
+    }
+  }
+
+  dequeue(){
+    if (this.isEmpty())
+      return 'empty queue';
+
+    let temp = this.front;
+    this.front=temp.next;
+    temp.next = null;
+    return temp.value;
+  }
+
+  peek(){
+
+    if (this.isEmpty)
+      return 'empty queue';
+
+    return this.front.value;
+  }
+
+  isEmpty(){
+    return this.front === null;
+  }
+
+}
+
+module.exports = {
+  Stack ,
+  Queue,
+};
 
 
 
