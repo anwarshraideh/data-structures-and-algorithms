@@ -14,7 +14,7 @@ describe ('stack testing',()=>{
 
   it('Can successfully push multiple values onto a stack',()=>{
 
-    stack.push(1);
+    stack.push(6);
     stack.push(2);
     stack.push(3);
     expect(stack.top.value).toEqual(3);
@@ -22,16 +22,16 @@ describe ('stack testing',()=>{
 
   it('Can successfully pop off the stack',()=>{
 
+    stack.push(6);
     stack.push(2);
-    stack.push(5);
     stack.pop();
-    expect(stack.top.value).toEqual(2);
+    expect(stack.top.value).toEqual(6);
   });
 
   it('Can successfully empty a stack after multiple pops',()=>{
 
+    stack.push(6);
     stack.push(2);
-    stack.push(5);
     stack.pop();
     stack.pop();
     expect(stack.top).toBeNull();
@@ -39,9 +39,9 @@ describe ('stack testing',()=>{
 
   it('Can successfully peek the next item on the stack',()=>{
 
+    stack.push(6);
     stack.push(2);
-    stack.push(5);
-    expect(stack.peek()).toEqual(5);
+    expect(stack.peek()).toEqual(2);
 
   });
 
