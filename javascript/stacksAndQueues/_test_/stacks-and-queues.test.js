@@ -39,9 +39,9 @@ describe ('stack testing',()=>{
 
   it('Can successfully peek the next item on the stack',()=>{
 
-    // stack.push(6);
-    // stack.push(2);
-    expect(stack.peek()).toEqual(3);
+
+    stack.push(5);
+    expect(stack.peek()).toEqual(5);
 
   });
 
