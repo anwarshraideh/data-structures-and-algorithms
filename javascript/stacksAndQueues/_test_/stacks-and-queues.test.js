@@ -1,8 +1,8 @@
 'use strict';
 
-const { Stack } = require('../stacks-and-queues');
+const { Stack , Queue } = require('../stacks-and-queues');
 const stack = new Stack();
-
+const queue = new Queue();
 
 describe ('stack testing',()=>{
 
@@ -54,6 +54,58 @@ describe ('stack testing',()=>{
 
     expect(stack.peek()).toEqual('empty stack');
     expect(stack.pop()).toEqual('empty stack');
+  });
+
+});
+
+describe ('queue testing',()=>{
+
+  it('Can successfully enqueue into a queue',()=>{
+
+    queue.enqueue(1);
+    expect(queue.front.value).toEqual(1);
+  });
+
+  it('Can successfully enqueue multiple values into a queue',()=>{
+
+    queue.enqueue(2);
+    queue.enqueue(3);
+    expect(queue.front.value).toEqual(1);
+    expect(queue.front.next.value).toEqual(2);
+    expect(queue.front.next.next.value).toEqual(3);
+
+  });
+
+  it('Can successfully dequeue out of a queue the expected value',()=>{
+     
+    expect(queue.dequeue()).toEqual(1);
+  });
+
+  it('Can successfully peek into a queue, seeing the expected value',()=>{
+    expect(queue.peek()).toEqual(2);
+  });
+
+  it('Can successfully empty a queue after multiple dequeues',()=>{
+
+    queue.dequeue();
+    queue.dequeue();
+    expect(queue.isEmpty()).toBeTruthy();
+
+  });
+
+  it('Can successfully instantiate an empty queue',()=>{
+
+    let queue1 = new Queue();
+    expect(queue1.isEmpty()).toBeTruthy();
+
+  });
+
+  it('Calling dequeue or peek on empty queue raises exception',()=>{
+
+    let queue2 = new Queue();
+    expect(queue2.dequeue()).toEqual('empty queue');
+    expect(queue2.peek()).toEqual('empty queue');
+
   });
 
 });
