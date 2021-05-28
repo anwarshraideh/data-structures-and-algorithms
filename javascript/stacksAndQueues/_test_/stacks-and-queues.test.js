@@ -20,6 +20,42 @@ describe ('stack testing',()=>{
     expect(stack.top.value).toEqual(3);
   });
 
+  it('Can successfully pop off the stack',()=>{
+
+    stack.push(2);
+    stack.push(5);
+    stack.pop();
+    expect(stack.top.value).toEqual(2);
+  });
+
+  it('Can successfully empty a stack after multiple pops',()=>{
+
+    stack.push(2);
+    stack.push(5);
+    stack.pop();
+    stack.pop();
+    expect(stack.top).toBeNull();
+  });
+
+  it('Can successfully peek the next item on the stack',()=>{
+
+    stack.push(2);
+    stack.push(5);
+    expect(stack.peek()).toEqual(5);
+
+  });
+
+  it('Can successfully instantiate an empty stack',()=>{
+
+    expect(stack.isEmpty()).toBeTruthy();
+
+  });
+
+  it('Calling pop or peek on empty stack raises exception',()=>{
+
+    expect(stack.peek()).toEqual('empty stack');
+    expect(stack.pop()).toEqual('empty stack');
+  });
 
 });
 

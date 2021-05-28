@@ -41,7 +41,7 @@ class Stack {
     }
     else
     {
-      return 'Empty stack';
+      return 'empty stack';
     }
 
 
@@ -52,7 +52,7 @@ class Stack {
     if (this.top){
       return this.top.value;
     }
-    return 'Empty stack';
+    return 'empty stack';
   }
 
   isEmpty ()
