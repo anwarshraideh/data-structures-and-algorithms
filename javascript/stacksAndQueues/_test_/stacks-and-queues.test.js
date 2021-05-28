@@ -39,15 +39,14 @@ describe ('stack testing',()=>{
 
   it('Can successfully peek the next item on the stack',()=>{
 
-
-    stack.push(5);
-    expect(stack.peek()).toEqual(5);
+    expect(stack.peek()).toEqual('empty stack');
 
   });
 
   it('Can successfully instantiate an empty stack',()=>{
 
-    expect(stack.isEmpty()).toBeTruthy();
+
+    expect(stack.isEmpty()).toBef();
 
   });
 
