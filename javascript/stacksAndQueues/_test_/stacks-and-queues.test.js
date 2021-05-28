@@ -62,27 +62,27 @@ describe ('queue testing',()=>{
 
   it('Can successfully enqueue into a queue',()=>{
 
-    queue.enqueue(1);
-    expect(queue.front.value).toEqual(1);
+    queue.enqueue(6);
+    expect(queue.front.value).toEqual(6);
   });
 
   it('Can successfully enqueue multiple values into a queue',()=>{
 
-    queue.enqueue(2);
-    queue.enqueue(3);
-    expect(queue.front.value).toEqual(1);
-    expect(queue.front.next.value).toEqual(2);
-    expect(queue.front.next.next.value).toEqual(3);
+    queue.enqueue(4);
+    queue.enqueue(5);
+    expect(queue.front.value).toEqual(6);
+    expect(queue.front.next.value).toEqual(4);
+    expect(queue.front.next.next.value).toEqual(5);
 
   });
 
   it('Can successfully dequeue out of a queue the expected value',()=>{
-     
-    expect(queue.dequeue()).toEqual(1);
+
+    expect(queue.dequeue()).toEqual(6);
   });
 
   it('Can successfully peek into a queue, seeing the expected value',()=>{
-    expect(queue.peek()).toEqual(2);
+    expect(queue.peek()).toEqual('empty queue');
   });
 
   it('Can successfully empty a queue after multiple dequeues',()=>{
