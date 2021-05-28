@@ -46,7 +46,7 @@ describe ('stack testing',()=>{
   it('Can successfully instantiate an empty stack',()=>{
 
 
-    expect(stack.isEmpty()).toBef();
+    expect(stack.isEmpty()).toBeTruthy();
 
   });
 
