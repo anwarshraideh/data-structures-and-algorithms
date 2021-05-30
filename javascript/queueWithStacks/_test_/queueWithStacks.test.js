@@ -1,5 +1,7 @@
 'use strict';
-const PseudoQueue = require('../queue-with-stacks.js');
+const PseudoQueue = require('../queueWithStacks.js');
+
+
 describe('Psuedo Queue tests', () => {
   it('Happy Path. enqueu into the Pseudo Queue', () => {
     let pQueue = new PseudoQueue();
