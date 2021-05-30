@@ -19,18 +19,6 @@ class PseudoQueue {
 
   dequeue()
   {
-    //     if (this.pushStack.isEmpty() && this.popStack.isEmpty() )
-    //       return 'empty queue';
-
-    //     if (this.popStack.isEmpty()) {
-    //       while (!this.pushStack.isEmpty()) {
-    //         this.popStack.push(this.pushStack.pop());
-    //       }
-
-    //     }
-
-    //     return this.popStack.pop();
-    //   }
 
     if ( this.popStack.isEmpty() && !this.pushStack.isEmpty()) {
 
