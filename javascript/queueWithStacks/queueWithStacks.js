@@ -87,7 +87,7 @@ class PseudoQueue {
       }
       this.secondStack.pop();
     } else if (this.firstStack.isEmpty() && this.secondStack.isEmpty()) {
-      return ' empty queue';
+      return 'empty queue';
     } else {
       this.secondStack.pop();
     }
