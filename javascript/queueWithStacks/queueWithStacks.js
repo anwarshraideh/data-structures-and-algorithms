@@ -19,19 +19,38 @@ class PseudoQueue {
 
   dequeue()
   {
-    if (this.pushStack.isEmpty() && this.popStack.isEmpty() )
-      return 'empty queue';
+    //     if (this.pushStack.isEmpty() && this.popStack.isEmpty() )
+    //       return 'empty queue';
 
-    if (this.popStack.isEmpty()) {
-      while (!this.pushStack.isEmpty()) {
-        this.popStack.push(this.pushStack.pop());
+    //     if (this.popStack.isEmpty()) {
+    //       while (!this.pushStack.isEmpty()) {
+    //         this.popStack.push(this.pushStack.pop());
+    //       }
+
+    //     }
+
+    //     return this.popStack.pop();
+    //   }
+
+    if ( this.popStack.isEmpty() && !this.pushStack.isEmpty()) {
+
+      while (this.pushStack.top)
+      {
+        this.popStack.push(this.pushStack.top.value);
+        this.pushStack.top = this.pushStack.top.next;
       }
 
+      this.popStack.pop();
+
+    } else if (this.pushStack.isEmpty() && this.popStack.isEmpty())
+    {
+      return 'empty queue';
     }
-
-    return this.popStack.pop();
+    else
+    {
+      this.popStack.pop();
+    }
   }
-
 
 
 }
