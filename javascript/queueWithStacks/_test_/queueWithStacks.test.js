@@ -1,35 +1,36 @@
 'use strict';
+
 const PseudoQueue = require('../queueWithStacks.js');
-describe('Psuedo Queue tests', () => {
-  it('Happy Path. enqueu into the Pseudo Queue', () => {
-    let pQueue = new PseudoQueue();
-    pQueue.enqueue(1);
-    pQueue.enqueue(2);
-    expect(pQueue.pushStack.peek()).toEqual(2);
-    expect(pQueue.popStack.isEmpty()).toBeTruthy();
+
+describe('PseudoQueue tests', () => {
+  it('add to the Queue ', () => {
+    let queue = new PseudoQueue();
+    let value = 4;
+    queue.enqueue(value);
+
+    expect(queue.front).toBe(value);
   });
-  it('Happy Path. enqueu into the Pseudo Queue and dequeue from it', () => {
-    let pQueue = new PseudoQueue();
-    pQueue.enqueue(1);
-    pQueue.enqueue(2);
-    pQueue.enqueue(3);
-    pQueue.dequeue();
-    expect(pQueue.pushStack.isEmpty()).toBeTruthy();
-    expect(pQueue.popStack.peek()).toEqual(2);
+
+  it('add multiple to the Queue ', () => {
+    let queue = new PseudoQueue();
+    let value = 4;
+    let value2 = 5;
+    queue.enqueue(value);
+    queue.enqueue(value2);
+    expect(queue.front).toBe(value);
   });
-  it('dequeue the both stacks both should be empty', () => {
-    let pQueue = new PseudoQueue();
-    pQueue.enqueue(1);
-    pQueue.enqueue(2);
-    pQueue.enqueue(3);
-    pQueue.dequeue();
-    pQueue.dequeue();
-    pQueue.dequeue();
-    expect(pQueue.pushStack.isEmpty()).toBeTruthy();
-    expect(pQueue.popStack.isEmpty()).toBeTruthy();
+
+  it('remove the front from the Queue', () => {
+    let queue = new PseudoQueue();
+    let value = 4;
+    queue.enqueue(value);
+    queue.dequeue();
+    expect(queue.front).toBeUndefined();
   });
-  it('dequeue empty stacks should return exception ', () => {
-    let pQueue = new PseudoQueue();
-    expect(pQueue.dequeue()).toEqual('empty queue');
+
+  it('should not remove the front from the Queue', () => {
+    let queue = new PseudoQueue();
+    queue.dequeue();
+    expect(queue.front).toBeUndefined();
   });
 });

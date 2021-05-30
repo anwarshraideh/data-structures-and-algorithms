@@ -1,48 +1,27 @@
 'use strict';
 
-const { Stack } = require('../stacksAndQueues/stacks-and-queues.js');
+const { Stack } = require('./../stacksAndQueues/stacks-and-queues.js');
 
 class PseudoQueue {
-
-  constructor(){
-
-    this.pushStack = new Stack ();
-    this.popStack - new Stack ();
-
+  constructor() {
+    this.stack1 = new Stack();
+    this.stack2 = new Stack();
+    this.front = null;
   }
 
-  enqueue(value){
-
-    this.pushStack.push(value);
-
+  enqueue(value) {
+    this.stack1.items.push(value);
+    this.front = this.stack1.items[0];
   }
 
-  dequeue()
-  {
-
-    if ( this.popStack.isEmpty() && !this.pushStack.isEmpty()) {
-
-      while (this.pushStack.top)
-      {
-        this.popStack.push(this.pushStack.top.value);
-        this.pushStack.top = this.pushStack.top.next;
-      }
-
-      this.popStack.pop();
-
-    } else if (this.pushStack.isEmpty() && this.popStack.isEmpty())
-    {
-      return 'empty queue';
+  dequeue() {
+    while (this.stack1.items.length > 0) {
+      this.stack2.push(this.stack1.items.pop());
     }
-    else
-    {
-      this.popStack.pop();
-    }
+    let front = this.stack2.items.pop();
+    this.front = this.stack2.items[this.stack2.items.length - 1];
+    return front;
   }
-
-
 }
 
-module.exports = PseudoQueue ;
-
-
+module.exports = PseudoQueue;
