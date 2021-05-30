@@ -2,36 +2,55 @@
 const PseudoQueue = require('../queueWithStacks.js');
 
 
-describe('Psuedo Queue tests', () => {
-  it('Happy Path. enqueu into the Pseudo Queue', () => {
-    let pQueue = new PseudoQueue();
-    pQueue.enqueue(1);
-    pQueue.enqueue(2);
-    expect(pQueue.pushStack.peek()).toEqual(2);
-    expect(pQueue.popStack.isEmpty()).toBeTruthy();
+describe('psuedo test', () => {
+
+  it('enqueu test', () => {
+
+    let queue = new PseudoQueue();
+
+    queue.enqueue(10);
+    queue.enqueue(20);
+
+    expect(queue.secondStack.isEmpty()).toBeTruthy();
+    expect(queue.firstStack.peek()).toEqual(20);
+
   });
-  it('Happy Path. enqueu into the Pseudo Queue and dequeue from it', () => {
-    let pQueue = new PseudoQueue();
-    pQueue.enqueue(1);
-    pQueue.enqueue(2);
-    pQueue.enqueue(3);
-    pQueue.dequeue();
-    expect(pQueue.pushStack.isEmpty()).toBeTruthy();
-    expect(pQueue.popStack.peek()).toEqual(2);
+
+  it('test enqueu and dequeue ', () => {
+
+    let queue = new PseudoQueue();
+
+    queue.enqueue(10);
+    queue.enqueue(20);
+    queue.enqueue(30);
+    queue.dequeue();
+
+    expect(queue.firstStack.isEmpty()).toBeTruthy();
+    expect(queue.secondStack.peek()).toEqual(20);
+
   });
-  it('dequeue the both stacks both should be empty', () => {
-    let pQueue = new PseudoQueue();
-    pQueue.enqueue(1);
-    pQueue.enqueue(2);
-    pQueue.enqueue(3);
-    pQueue.dequeue();
-    pQueue.dequeue();
-    pQueue.dequeue();
-    expect(pQueue.pushStack.isEmpty()).toBeTruthy();
-    expect(pQueue.popStack.isEmpty()).toBeTruthy();
+
+
+  it('dequeue the both stacks ', () => {
+
+    let queue = new PseudoQueue();
+
+    queue.enqueue(10);
+    queue.enqueue(20);
+    queue.enqueue(30);
+    queue.dequeue();
+    queue.dequeue();
+    queue.dequeue();
+
+    expect(queue.firstStack.isEmpty()).toBeTruthy();
+    expect(queue.secondStack.isEmpty()).toBeTruthy();
+
   });
-  it('dequeue empty stacks should return exception ', () => {
-    let pQueue = new PseudoQueue();
-    expect(pQueue.dequeue()).toEqual('Exception: Stacks are empty');
+
+  it('dequeue empty queue should return exception ', () => {
+
+    let queue = new PseudoQueue();
+    expect(queue.dequeue()).toEqual('empty queue');
+
   });
 });

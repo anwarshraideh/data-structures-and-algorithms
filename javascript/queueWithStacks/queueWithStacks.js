@@ -63,36 +63,35 @@ class Stack {
     return true ;
   }
 
-
-
 }
 
 class PseudoQueue {
+
   constructor() {
-    this.pushStack = new Stack();
-    this.popStack = new Stack();
+
+    this.firstStack = new Stack();
+    this.secondStack = new Stack();
   }
+
   enqueue(value) {
-    this.pushStack.push(value);
+
+    this.firstStack.push(value);
+
   }
   dequeue() {
-    // if the pop stack is empty push the nodes from the pushStack to popStack and pop the first
-    if (this.popStack.isEmpty() && !this.pushStack.isEmpty()) {
-      while (this.pushStack.top) {
-        this.popStack.push(this.pushStack.top.value);
-        this.pushStack.top = this.pushStack.top.next;
+
+    if (this.secondStack.isEmpty() && !this.firstStack.isEmpty()) {
+      while (this.firstStack.top) {
+        this.secondStack.push(this.firstStack.top.value);
+        this.firstStack.top = this.firstStack.top.next;
       }
-      this.popStack.pop();
-      // if both stacks  empty Exception
-    } else if (this.pushStack.isEmpty() && this.popStack.isEmpty()) {
-      return 'Exception: Stacks are empty';
-      // popStack is not empty so pop the first node
+      this.secondStack.pop();
+    } else if (this.firstStack.isEmpty() && this.secondStack.isEmpty()) {
+      return ' empty queue';
     } else {
-      this.popStack.pop();
+      this.secondStack.pop();
     }
   }
 }
-
-// const queue = new PseudoQueue();
 
 module.exports = PseudoQueue;
