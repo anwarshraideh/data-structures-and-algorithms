@@ -50,5 +50,18 @@ describe ('test',()=>{
 
   });
 
+  it('test dequeue other animal that not exists ',()=>{
+
+    let animalShelter = new AnimalShelter();
+    let animal1 = 'cat';
+    let animal2 = 'dog';
+
+    animalShelter.enqueue(animal1);
+    animalShelter.enqueue(animal2);
+    
+    expect(animalShelter.dequeue('duck')).toBeNull();
+
+  });
+
 
 });
