@@ -18,7 +18,7 @@ describe ('test',()=>{
 
     let animalShelter = new AnimalShelter();
     let animal = 'dog';
-    animalShelter.enqueue(animal );
+    animalShelter.enqueue(animal);
     expect(animalShelter.dog.front.value).toEqual(animal);
 
 
@@ -28,7 +28,7 @@ describe ('test',()=>{
 
     let animalShelter = new AnimalShelter();
     let animal = 'duck';
-    animalShelter.enqueue(animal );
+    animalShelter.enqueue(animal);
     expect(animalShelter.enqueue(animal)).toEqual('This shelter can not shelters other animals');
 
   });
@@ -46,7 +46,6 @@ describe ('test',()=>{
 
     expect(animalShelter.cat.isEmpty()).toBeTruthy();
     expect(animalShelter.dog.isEmpty()).toBeTruthy();
-    // expect(animalShelter.dequeue('duck')).toBeNull();
 
   });
 

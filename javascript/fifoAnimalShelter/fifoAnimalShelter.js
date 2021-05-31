@@ -8,8 +8,6 @@ class AnimalShelter {
 
     this.dog = new Queue();
     this.cat = new Queue();
-
-    // this.animals = new Queue();
   }
 
   enqueue(animal){
