@@ -33,5 +33,22 @@ describe ('test',()=>{
 
   });
 
+  it('test dequeue ',()=>{
+
+    let animalShelter = new AnimalShelter();
+    let animal1 = 'cat';
+    let animal2 = 'dog';
+
+    animalShelter.enqueue(animal1);
+    animalShelter.enqueue(animal2);
+    animalShelter.dequeue('cat');
+    animalShelter.dequeue('dog');
+
+    expect(animalShelter.cat.isEmpty()).toBeTruthy();
+    expect(animalShelter.dog.isEmpty()).toBeTruthy();
+    // expect(animalShelter.dequeue('duck')).toBeNull();
+
+  });
+
 
 });
