@@ -41,13 +41,12 @@ describe ('test',()=>{
 
     animalShelter.enqueue(animal1);
     animalShelter.enqueue(animal2);
+    animalShelter.dequeue('cat');
+    animalShelter.dequeue('dog');
 
-    expect(animalShelter.cat.rear.value).toEqual(animal1);
-    expect(animalShelter.dog.rear.value).toEqual(animal2);
-
-    expect(animalShelter.dequeue('cat')).toEqual('cat');
-    expect(animalShelter.dequeue('dog')).toEqual('dog');
-    expect(animalShelter.dequeue('duck')).toBeNull();
+    expect(animalShelter.cat.isEmpty()).toBeTruthy();
+    expect(animalShelter.dog.isEmpty()).toBeTruthy();
+    // expect(animalShelter.dequeue('duck')).toBeNull();
 
   });
 
