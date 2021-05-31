@@ -11,6 +11,7 @@ Within your LinkedList class, include a head property. Upon instantiation, an em
 - append(value) which adds a new node with the given value to the end of the list
 - insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
 - insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+- Define a method called .kthFromEnd(k) for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list.
 
 # Approach & Efficiency
 
@@ -20,6 +21,7 @@ Within your LinkedList class, include a head property. Upon instantiation, an em
 - append: time O(n)/space O(1)
 - insertAfter: time O(n)/space O(1)
 - insertBefore: time O(n)/space O(1)
+- kthFromEnd: time O(n)/space O(1)
 
 # API
 
@@ -31,9 +33,15 @@ The linked list code contains two classes, Node class, and LinkedList class that
 4- append(value) which adds a new node with the given value to the end of the list
 5- insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
 6- insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+7- kthFromEnd: accept an index and return the value of the node from the end
+
 
 
 ![ll](../../images/llwhiteboard1.png)
 
 
+
 ![ll-insertion](../../images/codechallenge66.png)
+
+![ll-kthrromend](../../images/kth1.png)
+

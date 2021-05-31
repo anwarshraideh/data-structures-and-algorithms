@@ -45,5 +45,7 @@ stacks and queue are the same
 
 - isEmpty : that takes no argument, and returns a boolean indicating whether or not the stack or queue is empty.
 
+
 ![stack](../../images/stack.png)
 ![queue](../../images/queue.png)
+
