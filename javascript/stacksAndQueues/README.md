@@ -44,3 +44,8 @@ stacks and queue are the same
 -that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue.
 
 - isEmpty : that takes no argument, and returns a boolean indicating whether or not the stack or queue is empty.
+
+
+![stack](../../images/stack.png)
+![queue](../../images/queue.png)
+
