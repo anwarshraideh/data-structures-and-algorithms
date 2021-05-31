@@ -45,8 +45,8 @@ describe ('test',()=>{
     expect(animalShelter.cat.rear.value).toEqual(animal1);
     expect(animalShelter.dog.rear.value).toEqual(animal2);
 
-    expect(animalShelter.dequeue(animal1)).toEqual('cat');
-    expect(animalShelter.dequeue(animal2)).toEqual('dog');
+    expect(animalShelter.dequeue('cat')).toEqual('cat');
+    expect(animalShelter.dequeue('dog')).toEqual('dog');
     expect(animalShelter.dequeue('duck')).toBeNull();
 
   });
