@@ -9,7 +9,7 @@ describe ('test multi Bracket Validation',() =>{
 
 
     expect(multiBracketValidation('()[]]')).toBeFalsy();
-    expect(multiBracketValidation('()[]')).toBeTruthy();
+    expect(multiBracketValidation('([{')).toBeFalsy();
   });
 
 
