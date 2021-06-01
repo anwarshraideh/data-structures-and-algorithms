@@ -16,7 +16,10 @@ function multiBracketValidation(input){
 
       stack.push(Input[i]);
 
-    } else if (Input[i] ===']' || Input[i] ==='}' || Input[i] ===')' )
+
+    }
+
+    else if (Input[i] ===']' || Input[i] ==='}' || Input[i] ===')' )
 
     {
 
@@ -25,6 +28,7 @@ function multiBracketValidation(input){
       if ( openBracket === '{}' || openBracket === '[]' || openBracket === '()' )
       {
         stack.pop();
+
       }
       else
       {
@@ -35,7 +39,8 @@ function multiBracketValidation(input){
 
   }
 
-  return stack.length === 0;
+  return true;
+
 
 
 
