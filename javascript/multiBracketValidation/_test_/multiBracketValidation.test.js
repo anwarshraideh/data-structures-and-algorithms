@@ -4,33 +4,29 @@ const multiBracketValidation = require('../multiBracketValidation.js');
 
 describe ('test multi Bracket Validation',() =>{
 
-  it ('should return false when there is only one bracket unclosed',()=>{
+  it (' return true if all brackets closed ',()=>{
+
+    expect(multiBracketValidation('()[[Extra Characters]]')).toBeTruthy();
+
+
+  });
+
+
+  it ('return false  if there is only one bracket unclosed',()=>{
 
 
     expect(multiBracketValidation('()[]]')).toBeFalsy();
 
   });
 
-//   it ('',()=>{
 
 
+  it ('return false  if all brackets opended',()=>{
+
+    expect(multiBracketValidation('([{{')).toBeFalsy();
 
 
-//   });
-
-//   it ('',()=>{
-
-
-
-
-//   });
-
-//   it ('',()=>{
-
-
-
-
-//   });
+  });
 
 
 
