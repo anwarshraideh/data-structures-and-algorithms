@@ -45,6 +45,13 @@ describe ('test multi Bracket Validation',() =>{
     expect(multiBracketValidation('(){}[')).toBeFalsy();
 
   });
+
+  it ('return true if the bracket completed',() =>{
+
+
+    expect(multiBracketValidation('(){}[]')).toBeTruthy();
+
+  });
 });
 
 
