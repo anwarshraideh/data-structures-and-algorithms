@@ -23,7 +23,7 @@ describe ('test multi Bracket Validation',() =>{
 
   it ('return false  if all brackets opended',()=>{
 
-    expect(multiBracketValidation( '([{' )).toBeFalsy();
+    expect(multiBracketValidation( '{[(((({' )).toBeFalsy();
 
 
   });
