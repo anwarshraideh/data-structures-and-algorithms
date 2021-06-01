@@ -39,8 +39,8 @@ function multiBracketValidation(input){
 
   }
 
-  if ( stack.length === 0) return true;
-  else return false ;
+  if ( stack.length === 0) return false;
+  else return true ;
 
 
 
