@@ -78,10 +78,12 @@ let multiBracketValidation = function (str) {
       // else  {return true;}
     }
   }
+ 
   // By the completion of the for loop after checking all the brackets of the str, at the end, if the stack is not empty then fail
   if (stack.length !== 0) {return false;}
+  else if (stack.length === 0){ return true;}
 
-  return true;
+ 
 };
 
 module.exports = multiBracketValidation;
