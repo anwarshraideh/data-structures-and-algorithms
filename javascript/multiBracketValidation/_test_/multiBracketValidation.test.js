@@ -6,11 +6,8 @@ describe ('test multi Bracket Validation',() =>{
 
   it (' return true if all brackets closed ',()=>{
 
-    // expect(multiBracketValidation('()[[Extra Characters]]')).toBeTruthy();
-    // {}(){}
-
-    expect(multiBracketValidation('{}(){}')).toBeTruthy();
-
+    expect(multiBracketValidation('()[[Extra Characters]]')).toBeTruthy();
+   
   });
 
 
@@ -23,12 +20,6 @@ describe ('test multi Bracket Validation',() =>{
 
 
 
-  it ('return false  if all brackets opended',() =>{
-
-    expect(multiBracketValidation( '{[(((({' )).toBeFalsy();
-
-
-  });
 
 
 

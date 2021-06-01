@@ -35,16 +35,12 @@ function multiBracketValidation(input){
 
   }
 
-  if (stack.length > 0) {
-    return false;
-  } else if (stack.length === 0){
-    return true;
-  }
-  
-  //   return stack.length === 0;
+  return stack.length === 0;
+
 
 
 }
+
 
 module.exports = multiBracketValidation;
 
