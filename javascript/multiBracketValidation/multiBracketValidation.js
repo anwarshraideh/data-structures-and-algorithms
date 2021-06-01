@@ -1,50 +1,73 @@
+// 'use strict';
+
+// const { Stack } = require('../stacksAndQueues/stacks-and-queues.js');
+
+
+// let stack = new Stack();
+
+// function multiBracketValidation(input){
+
+//   let Input = input.split('');
+//   let openBracket;
+
+//   for (let i = 0 ; i < Input.length ; i++) {
+
+//     if ( Input[i] ==='[' || Input[i] ==='{' || Input[i] ==='(' ){
+
+//       stack.push(Input[i]);
+
+//     } else if (Input[i] ===']' || Input[i] ==='}' || Input[i] ===')' )
+
+//     {
+
+//       openBracket = stack.peek() + Input[i];
+
+//       if ( openBracket === '{}' || openBracket === '[]' || openBracket === '()' )
+//       {
+//         stack.pop();
+//       }
+//       else
+//       {
+//         return false;
+//       }
+
+//     }
+
+//   }
+
+//   return stack.length === 0;
+
+
+
+// }
+
+
+// module.exports = multiBracketValidation;
+
 'use strict';
 
 const { Stack } = require('../stacksAndQueues/stacks-and-queues.js');
 
-
-let stack = new Stack();
-
-function multiBracketValidation(input){
-
-  let Input = input.split('');
-  let openBracket;
-
-  for (let i = 0 ; i < Input.length ; i++) {
-
-    if ( Input[i] ==='[' || Input[i] ==='{' || Input[i] ==='(' ){
-
-      stack.push(Input[i]);
-
-    } else if (Input[i] ===']' || Input[i] ==='}' || Input[i] ===')' )
-
-    {
-
-      openBracket = stack.peek() + Input[i];
-
-      if ( openBracket === '{}' || openBracket === '[]' || openBracket === '()' )
-      {
+const multiBracketValidation = (str) => {
+  let stack = new Stack();
+  let array = str.split('');
+  let check;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === '[' || array[i] === '{' || array[i] === '(') {
+      stack.push(array[i]);
+    } else if (array[i] === ']' || array[i] === '}' || array[i] === ')') {
+      check = stack.peek() + array[i];
+      if (check === '{}' || check === '[]' || check === '()') {
         stack.pop();
-      }
-      else
-      {
+      } else {
         return false;
       }
-
     }
-
   }
-
   return stack.length === 0;
-
-
-
-}
-
+};
 
 module.exports = multiBracketValidation;
-
-
 
 
 
