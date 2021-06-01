@@ -1,51 +1,31 @@
 'use strict';
 
-const { Stack } = require('../stacksAndQueues/stacks-and-queues.js');
 
+let multiBracketValidation = function (input) {
+  let stack = [];
+  let map = {
+    '(': ')',
+    '[': ']',
+    '{': '}'
+  };
 
-let stack = new Stack();
+  for (let i = 0; i < input.length; i++) {
 
-function multiBracketValidation(input){
-
-  let Input = input.split('');
-  let openBracket;
-
-  for (let i = 0 ; i < Input.length ; i++) {
-
-    if ( Input[i] ==='[' || Input[i] ==='{' || Input[i] ==='(' ){
-
-      stack.push(Input[i]);
-
-
+    if (input[i] === '(' || input[i] === '{' || input[i] === '[' ) {
+      stack.push(input[i]);
     }
+    else {
+      let last = stack.pop();
 
-    else if (Input[i] ===']' || Input[i] ==='}' || Input[i] ===')' )
-
-    {
-
-      openBracket = stack.peek() + Input[i];
-
-      if ( openBracket === '{}' || openBracket === '[]' || openBracket === '()' )
-      {
-        stack.pop();
-
-      }
-      else
-      {
-        return false;
-      }
-
+      if (input[i] !== map[last]) {return false;}
     }
-
   }
 
-  return true ;
+  if (stack.length !== 0) {return false;}
+
+  return true;
 
 
-
-
-}
-
+};
 
 module.exports = multiBracketValidation;
-
