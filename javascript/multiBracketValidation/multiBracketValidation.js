@@ -35,8 +35,13 @@ function multiBracketValidation(input){
 
   }
 
-
-  return stack.length === 0;
+  if (stack.length > 0) {
+    return false;
+  } else if (stack.length === 0){
+    return true;
+  }
+  
+  //   return stack.length === 0;
 
 
 }
