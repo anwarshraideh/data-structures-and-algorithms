@@ -15,6 +15,7 @@ function multiBracketValidation(input){
     if ( Input[i] ==='[' || Input[i] ==='{' || Input[i] ==='(' ){
 
       stack.push(Input[i]);
+      return false;
 
     }
 
