@@ -6,8 +6,10 @@ describe ('test multi Bracket Validation',() =>{
 
   it (' return true if all brackets closed ',()=>{
 
-    expect(multiBracketValidation('()[[Extra Characters]]')).toBeTruthy();
+    // expect(multiBracketValidation('()[[Extra Characters]]')).toBeTruthy();
+    // {}(){}
 
+    expect(multiBracketValidation('{}(){}')).toBeTruthy();
 
   });
 
