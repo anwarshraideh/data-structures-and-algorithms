@@ -25,6 +25,7 @@ function multiBracketValidation(input){
       if ( openBracket === '{}' || openBracket === '[]' || openBracket === '()' )
       {
         stack.pop();
+        return true;
       }
       else
       {

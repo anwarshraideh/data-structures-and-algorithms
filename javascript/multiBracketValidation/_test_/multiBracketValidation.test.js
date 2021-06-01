@@ -18,6 +18,12 @@ describe ('test multi Bracket Validation',() =>{
 
   });
 
+  it('return true if the brackets are completed', () => {
+    expect(multiBracketValidation('()[]{}')).toBeTruthy();
+
+
+  });
+
 });
 
 
