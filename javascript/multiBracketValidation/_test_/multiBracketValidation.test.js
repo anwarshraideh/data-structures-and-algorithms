@@ -27,19 +27,18 @@
 
 'use strict';
 
-const multiBracketValidation = require('../multiBracketValidation.js');
+const multiBracketValidation = require ('../multiBracketValidation.js');
 
-describe('Multi Bracket Valdation', () => {
-  it('should return false when there is only one bracket unclosed ', () => {
-    expect(multiBracketValidation('()[]]')).toBeFalsy();
-  });
-  it('should return true when all the brackets are closed', () => {
-    expect(multiBracketValidation('()[[Extra Characters]]')).toBeTruthy();
-  });
-  it('should return true when all the brackets are closed', () => {
-    expect(multiBracketValidation('{}{Code}[Fellows](())')).toBeTruthy();
-  });
-  it('Edge Case were all the brackets are open:', () => {
-    expect(multiBracketValidation('{[(((({')).toBeFalsy();
-  });
+test('“Happy Path” - Expected outcome', () => {
+
+  expect(multiBracketValidation('()[[Extra Characters]]') ).toBeTruthy();
+});
+
+test('“Happy Path” - Expected outcome', () => {
+
+  expect(multiBracketValidation('()[][')).toBeFalsy();
+});
+test('Edge Case (return false if all input open brackets)', () => {
+
+  expect(multiBracketValidation('([{')).toBeFalsy();
 });

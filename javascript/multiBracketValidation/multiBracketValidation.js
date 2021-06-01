@@ -46,28 +46,39 @@
 
 'use strict';
 
-const { Stack } = require('../stacksAndQueues/stacks-and-queues.js');
+const Stack = require('../stacksAndQueues/stacks-and-queues.js').Stack;
 
-const multiBracketValidation = (str) => {
-  let stack = new Stack();
-  let array = str.split('');
-  let check;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === '[' || array[i] === '{' || array[i] === '(') {
-      stack.push(array[i]);
-    } else if (array[i] === ']' || array[i] === '}' || array[i] === ')') {
-      check = stack.peek() + array[i];
-      if (check === '{}' || check === '[]' || check === '()') {
-        stack.pop();
-      } else {
+
+function multiBracketValidation(input) {
+  const stack = new Stack();
+
+  for (let i = 0; i < input.length; i++) {
+    if (input[i] === '(' || input[i] === '[' || input[i] === '{') {
+      stack.push(input[i]);
+    }
+    if (input[i] === ')' || input[i] === ']' || input[i] === '}') {
+      const openBracket = stack.pop();
+      if (openBracket === '(' && input[i] === '(') {
+        console.log(false);
+        return false;
+      }
+      if (openBracket === '[' && input[i] === '[') {
+        console.log(false);
+        return false;
+      }
+      if (openBracket === '{' && input[i] === '{') {
+        console.log(false);
         return false;
       }
     }
   }
-  return stack.length === 0;
-};
+  if (stack.length > 0) {
+    console.log(false);
+    return false;
+  }
+  console.log(true);
+  return true;
+}
+
 
 module.exports = multiBracketValidation;
-
-
-
