@@ -32,13 +32,19 @@ describe ('test multi Bracket Validation',() =>{
 
   // });
 
-  it('return true if the brackets are completed', () => {
+  it('return false if  it only opend brackets  ', () => {
 
     expect(multiBracketValidation('({((')).toBeFalsy();
 
   });
 
 
+
+  it('return false if there is a bracket not complete ', () => {
+
+    expect(multiBracketValidation('(){}[')).toBeFalsy();
+
+  });
 });
 
 
