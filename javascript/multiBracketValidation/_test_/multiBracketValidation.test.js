@@ -19,18 +19,18 @@ describe ('test multi Bracket Validation',() =>{
 
   // });
 
-  it ('return false if there is only one bracket unclosed',() =>{
+  // it ('return false if there is only one bracket unclosed',() =>{
 
 
-    expect(multiBracketValidation('(){}')).toBeTruthy();
+  //   expect(multiBracketValidation('(){}')).toBeTruthy();
 
-  });
+  // });
 
-  it('return true if the brackets are completed', () => {
-    expect(multiBracketValidation('[{()()}({[]})]({}[({})])((((((()[])){}))[]{{{({({({{{{{{}}}}}})})})}}}))[][][]')).toBeTruthy();
+  // it('return true if the brackets are completed', () => {
+  //   expect(multiBracketValidation('[{()()}({[]})]({}[({})])((((((()[])){}))[]{{{({({({{{{{{}}}}}})})})}}}))[][][]')).toBeTruthy();
 
 
-  });
+  // });
 
   it('return true if the brackets are completed', () => {
 
