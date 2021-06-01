@@ -12,7 +12,7 @@ describe ('test multi Bracket Validation',() =>{
   });
 
 
-  it ('return false  if there is only one bracket unclosed',()=>{
+  it ('return false  if there is only one bracket unclosed',() =>{
 
 
     expect(multiBracketValidation('()[]]')).toBeFalsy();
@@ -21,7 +21,7 @@ describe ('test multi Bracket Validation',() =>{
 
 
 
-  it ('return false  if all brackets opended',()=>{
+  it ('return false  if all brackets opended',() =>{
 
     expect(multiBracketValidation( '{[(((({' )).toBeFalsy();
 
