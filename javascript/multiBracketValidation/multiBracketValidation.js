@@ -75,7 +75,7 @@ let multiBracketValidation = function (str) {
 
       //If the popped element from the stack, which is the last opening brace doesn’t match the corresponding closing brace in the map, then return false
       if (str[i] !== map[last]) {return false;}
-      else  {return true;}
+      // else  {return true;}
     }
   }
   // By the completion of the for loop after checking all the brackets of the str, at the end, if the stack is not empty then fail

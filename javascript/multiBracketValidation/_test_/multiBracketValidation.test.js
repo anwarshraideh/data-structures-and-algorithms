@@ -49,7 +49,7 @@ describe ('test multi Bracket Validation',() =>{
   it ('return true if the bracket completed',() =>{
 
 
-    expect(multiBracketValidation('(){}[]')).toBeTruthy();
+    expect(multiBracketValidation('(){}[]')).toBe(true);
 
   });
 });
