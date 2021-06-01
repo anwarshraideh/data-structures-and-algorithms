@@ -53,10 +53,10 @@
 
 'use strict';
 
-const { Stack } = require('../stacksAndQueues/stacks-and-queues.js');
+// const { Stack } = require('../stacksAndQueues/stacks-and-queues.js');
 
 let multiBracketValidation = function (str) {
-  let stack = new Stack();
+  let stack = [];
   let map = {
     '(': ')',
     '[': ']',
@@ -75,15 +75,15 @@ let multiBracketValidation = function (str) {
 
       //If the popped element from the stack, which is the last opening brace doesn’t match the corresponding closing brace in the map, then return false
       if (str[i] !== map[last]) {return false;}
-      // else  {return true;}
     }
   }
- 
+
   // By the completion of the for loop after checking all the brackets of the str, at the end, if the stack is not empty then fail
   if (stack.length !== 0) {return false;}
-  else if (stack.length === 0){ return true;}
 
- 
+  return true;
+
+
 };
 
 module.exports = multiBracketValidation;
