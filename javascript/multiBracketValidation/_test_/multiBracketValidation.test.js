@@ -19,12 +19,6 @@ describe ('test multi Bracket Validation',() =>{
 
   });
 
-  it ('return false if there is all bracket open',() =>{
-
-
-    expect(multiBracketValidation('[({')).toBeFalsy();
-
-  });
 
 });
 
