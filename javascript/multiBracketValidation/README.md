@@ -13,4 +13,4 @@ Curly Brackets : {}
 
 Big O : time O(n)/Space O(1)
 
-![multi](../../images/multibrackettt.png)
+![multi](../../images/editmultibracket.png)
