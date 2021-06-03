@@ -12,10 +12,10 @@ class AnimalShelter {
 
   enqueue(animal){
 
-    if (animal === 'dog'){
+    if (animal.type === 'dog'){
       this.dog.enqueue(animal);
     }
-    else if (animal === 'cat'){
+    else if (animal.type === 'cat'){
       this.cat.enqueue(animal);
     }
     else
