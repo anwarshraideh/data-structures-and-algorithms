@@ -10,11 +10,21 @@ describe(' Binary Search Tree ' , () =>{
     let tree = new BinarySearchTree();
     expect(tree.root).toBeNull();
 
-    // let root = new Node(2);
-    // let binaryTree = new BinarySearchTree(root);
-    // expect(binaryTree.root.next).toBeNull();
+  });
+
+  it('Can successfully instantiate a tree with a single root node',()=>{
+
+    let value = 6 ;
+    let root = new Node(value);
+
+    let binaryTree = new BinarySearchTree(root);
+    expect(binaryTree.root.next).toBeNull();
+    expect(binaryTree.root.value).toEqual(value);
 
   });
+
+
+
 
 
 });
