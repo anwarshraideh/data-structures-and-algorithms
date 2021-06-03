@@ -8,15 +8,15 @@ let tree = null;
 describe(' Binary Tree ' , () =>{
 
   beforeAll(() => {
-    let one = new Node(1);// tree root
-    let two = new Node(2);
-    let three = new Node(3);
-    let four = new Node(4);
-    let five = new Node(5);
-    let six = new Node(6);
-    let seven = new Node(7);
-    let eight = new Node(8);
-    let nine = new Node(9);
+    let one = new Node(10);// tree root
+    let two = new Node(20);
+    let three = new Node(30);
+    let four = new Node(40);
+    let five = new Node(50);
+    let six = new Node(60);
+    let seven = new Node(70);
+    let eight = new Node(80);
+    let nine = new Node(90);
 
     one.left = two;//
     one.right = three;//
@@ -27,11 +27,11 @@ describe(' Binary Tree ' , () =>{
     three.left = four;
     three.right = five;
 
-    //             1
-    //     2               3
-    // 6        -      4       5
-    //     7
-    // 8       9
+    //             10
+    //     20               30
+    // 60        -      40       50
+    //     70
+    // 80       90
     tree = new BinaryTree(one);
   });
 
@@ -41,27 +41,18 @@ describe(' Binary Tree ' , () =>{
   });
 
   it('Should successfully instantiate a tree with a single root node', () => {
-    const one = new Node(1);
+    const one = new Node(10);
     const tree = new BinaryTree(one);
-    expect(tree.root.value).toBe(1);
+    expect(tree.root.value).toBe(10);
   });
 
-  it('Should successfully add a left child and right child to a single root node', () => {
-    const one = new Node(1);
-    const two = new Node(2);
-    const three = new Node(3);
-    one.left = two;
-    one.right = three;
-    const tree = new BinaryTree(one);
-    expect(tree.root.left.value).toBe(2);
-    expect(tree.root.right.value).toBe(3);
-  });
+  
 
 
 
   it('should traverse tree using pre-order', () => {
     // arrange
-    let expected = [1, 2, 6, 7, 8, 9, 3, 4, 5];
+    let expected = [10, 20, 60, 70, 80, 90, 30, 40, 50];
     // act
     let preOrderResult = tree.preOrder();
     // assert
@@ -71,7 +62,7 @@ describe(' Binary Tree ' , () =>{
   // left - root -right
   it('should traverse tree using in-order', () => {
     // arrange
-    let expected = [6, 8, 7, 9, 2, 1, 4, 3, 5];
+    let expected = [60, 80, 70, 90, 20, 10, 40, 30, 50];
     // act
     let inOrderResult = tree.inOrder();
     // assert
@@ -81,7 +72,7 @@ describe(' Binary Tree ' , () =>{
   // left - right - root
   it('should traverse tree using post-order', () => {
     // arrange
-    let expected = [8, 9, 7, 6, 2, 4, 5, 3, 1];
+    let expected = [80, 90, 70, 60, 20, 40, 50, 30, 10];
     // act
     let postOrderResult = tree.postOrder();
     // assert
@@ -130,6 +121,7 @@ describe('Binary Search Tree ',()=>{
   });
 
 
-
 });
+
+
 
