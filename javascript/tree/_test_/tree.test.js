@@ -24,25 +24,32 @@ describe(' Binary Search Tree ' , () =>{
 
   it('Can successfully add a left child and right child to a single root node',()=>{
 
-    // let value = 20 ;
-    // let root = new Node(value);
-    // let binaryTree = new BinarySearchTree(root);
-
-    // binaryTree.add(30);
-    // binaryTree.add(10);
-
-    // expect(binaryTree.root.left.value).toEqual(10);
-    // expect(binaryTree.root.right.value).toEqual(11);
 
     let value = 8 ;
     let root = new Node(value);
-    let tree = new BinarySearchTree(root);
+    let binaryTree = new BinarySearchTree(root);
     const left = 3;
     const right = 12;
-    tree.add(left);
-    tree.add(right);
-    expect(tree.root.left.value).toEqual(left);
-    expect(tree.root.right.value).toEqual(right);
+    binaryTree.add(left);
+    binaryTree.add(right);
+    expect(binaryTree.root.left.value).toEqual(left);
+    expect(binaryTree.root.right.value).toEqual(right);
+
+  });
+
+  it('Can successfully return a collection from a preorder traversal',()=>{
+
+    let value = 2 ;
+    let root = new Node(value);
+    let binaryTree = new BinarySearchTree(root);
+
+    binaryTree.add(4);
+    binaryTree.add(11);
+    binaryTree.add(6);
+    binaryTree.add(9);
+    binaryTree.add(0);
+
+    expect(binaryTree.preOrder()).toStrictEqual([2, 0, 4, 11, 6, 9]);
 
   });
 
