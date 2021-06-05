@@ -32,6 +32,8 @@ describe(' Binary Tree ' , () =>{
     // 60        -      40       50
     //     70
     // 80       90
+
+
     tree = new BinaryTree(one);
   });
 
@@ -46,43 +48,28 @@ describe(' Binary Tree ' , () =>{
     expect(tree.root.value).toBe(10);
   });
 
-  
-
-
-
-  it('should traverse tree using pre-order', () => {
-    // arrange
+  it('Can successfully return a collection from a preorder traversal', () => {
     let expected = [10, 20, 60, 70, 80, 90, 30, 40, 50];
-    // act
     let preOrderResult = tree.preOrder();
-    // assert
     expect(preOrderResult).toEqual(expected);
   });
 
   // left - root -right
-  it('should traverse tree using in-order', () => {
-    // arrange
+  it('Can successfully return a collection from an inorder traversal', () => {
     let expected = [60, 80, 70, 90, 20, 10, 40, 30, 50];
-    // act
     let inOrderResult = tree.inOrder();
-    // assert
     expect(inOrderResult).toEqual(expected);
   });
 
   // left - right - root
-  it('should traverse tree using post-order', () => {
-    // arrange
+  it('Can successfully return a collection from a postorder traversal', () => {
     let expected = [80, 90, 70, 60, 20, 40, 50, 30, 10];
-    // act
     let postOrderResult = tree.postOrder();
-    // assert
     expect(postOrderResult).toEqual(expected);
   });
 
 
 });
-
-
 
 
 describe('Binary Search Tree ',()=>{
@@ -122,6 +109,5 @@ describe('Binary Search Tree ',()=>{
 
 
 });
-
 
 
