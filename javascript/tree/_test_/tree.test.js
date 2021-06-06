@@ -72,6 +72,10 @@ describe(' Binary Tree ' , () =>{
     expect(tree.findMaximum()).toEqual(90);
   });
 
+  it('should return null when the tree is empty  ', () => {
+    let tree2 = new BinaryTree();
+    expect(tree2.findMaximum()).toBeNull();
+  });
 
 });
 
