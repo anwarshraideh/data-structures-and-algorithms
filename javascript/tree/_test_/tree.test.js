@@ -68,6 +68,10 @@ describe(' Binary Tree ' , () =>{
     expect(postOrderResult).toEqual(expected);
   });
 
+  it('Can successfully finad a maximum value ', () => {
+    expect(tree.findMaximum()).toEqual(90);
+  });
+
 
 });
 

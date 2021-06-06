@@ -59,6 +59,24 @@ class BinaryTree {
     return result;
 
   }
+
+  findMaximum()
+  {
+    let max = 0;
+    if (!this.root) {
+      return null ;
+    }
+    let newArray = this.inOrder();
+    for (let index = 0; index < newArray.length; index++) {
+      if (max < newArray[index] )
+      {
+        max = newArray[index] ;
+      }
+
+    }
+    return max ;
+
+  }
 }
 
 
