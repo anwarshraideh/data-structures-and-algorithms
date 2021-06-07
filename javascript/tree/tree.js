@@ -1,6 +1,7 @@
 'use strict';
 
 const Node = require('./node.js');
+// const { Queue } = require('../stacksAndQueues/stacks-and-queues.js');
 
 class BinaryTree {
 
@@ -77,7 +78,47 @@ class BinaryTree {
     return max ;
 
   }
+
+  breadthFirst(){
+  //   let queue = new Queue();
+  //   let treeValues = [];
+
+    //   if (!this.root) {
+    //     return null;
+    //   } else {
+    //     queue.enqueue(this.root);
+    //   }
+
+    //   while (queue.length !== 0){
+
+    //     let front = queue.dequeue();
+    //     treeValues.push(front.value);
+    //     if (front.left) queue.enqueue(front.left);
+    //     if (front.right) queue.enqueue(front.right);
+    //   }
+    //   return treeValues;
+
+    // }
+
+    if(this.root === null) return null;
+    if(this.length === 1) return 1;
+    let visited = [],
+      queue = [],
+      current_node = this.root;
+
+    queue.push(current_node);
+    while (queue.length) {
+      current_node = queue.shift();
+      visited.push(current_node.value);
+
+      if (current_node.left) queue.push(current_node.left);
+      if (current_node.right) queue.push(current_node.right);
+    }
+    return visited;
+  }
+
 }
+
 
 
 class BinarySearchTree {
