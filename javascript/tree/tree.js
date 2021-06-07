@@ -93,7 +93,7 @@ class BinaryTree {
 
       let front = queue.dequeue();
       treeValues.push(front.value);
-      if (front.left) queue.enqueu(front.left);
+      if (front.left) queue.enqueue(front.left);
       if (front.right) queue.enqueue(front.right);
     }
     return treeValues;
