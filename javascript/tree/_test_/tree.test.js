@@ -76,6 +76,16 @@ describe(' Binary Tree ' , () =>{
     let tree2 = new BinaryTree();
     expect(tree2.findMaximum()).toBeNull();
   });
+  it('breadthFirst', () => {
+    let expected =  [10,20,30,40,50,60,70,80,90];
+    let bF = tree.breadthFirst();
+    expect(bF).toEqual(expected);
+  });
+  it('returns null if empty tree', () => {
+    let newTree = new BinaryTree();
+    expect(newTree.breadthFirst()).toBeNull();
+  });
+
 
 });
 
