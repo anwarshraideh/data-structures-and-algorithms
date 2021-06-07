@@ -78,7 +78,7 @@ describe(' Binary Tree ' , () =>{
   });
   it('breadthFirst', () => {
     let bF = tree.breadthFirst();
-    expect(bF).toEqual([10,20,30,40,50,70,80,90]);
+    expect(bF).toEqual([10,20,30,60,40,50,70,80,90]);
   });
   it('returns null if empty tree', () => {
     let newTree = new BinaryTree();
