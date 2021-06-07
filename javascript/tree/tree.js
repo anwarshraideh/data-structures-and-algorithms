@@ -100,21 +100,24 @@ class BinaryTree {
 
     // }
 
-    if(this.root === null) return null;
-    if(this.length === 1) return 1;
-    let visited = [],
-      queue = [],
-      current_node = this.root;
+    if(!this.root) return null;
 
-    queue.push(current_node);
-    while (queue.length) {
-      current_node = queue.shift();
-      visited.push(current_node.value);
+    // if(this.length === 1) return 1;
+    let treeValues = [] , queue = [];
+    // current_node = this.root;
 
-      if (current_node.left) queue.push(current_node.left);
-      if (current_node.right) queue.push(current_node.right);
+    queue.push(this.root);
+    while (queue.length) 
+    {
+
+      this.root = queue.shift();
+      treeValues.push(this.root.value);
+
+      if (this.root.left) queue.push(this.root.left);
+      if (this.root.right) queue.push(this.root.right);
+
     }
-    return visited;
+    return treeValues;
   }
 
 }
