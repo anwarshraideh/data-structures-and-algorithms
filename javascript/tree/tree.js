@@ -80,34 +80,14 @@ class BinaryTree {
   }
 
   breadthFirst(){
-  //   let queue = new Queue();
-  //   let treeValues = [];
-
-    //   if (!this.root) {
-    //     return null;
-    //   } else {
-    //     queue.enqueue(this.root);
-    //   }
-
-    //   while (queue.length !== 0){
-
-    //     let front = queue.dequeue();
-    //     treeValues.push(front.value);
-    //     if (front.left) queue.enqueue(front.left);
-    //     if (front.right) queue.enqueue(front.right);
-    //   }
-    //   return treeValues;
-
-    // }
 
     if(!this.root) return null;
 
-    // if(this.length === 1) return 1;
-    let treeValues = [] , queue = [];
-    // current_node = this.root;
+    let treeValues = [] ;
+    let queue = [];
 
     queue.push(this.root);
-    while (queue.length) 
+    while (queue.length)
     {
 
       this.root = queue.shift();
