@@ -34,7 +34,7 @@
 
 'use strict';
 
-const { Node, KAryTree } = require('../fizz-buzz-tree.js');
+const { Node, KAryTree } = require('../FizzBuzzTree.js');
 
 describe('==================FIZZ BUZZ TREE==================', () => {
   it('Should replace with divisible numbers on 3 with Fizz, divisible numbers on 5 with Buzz and if it\'s divisible on both FizzBuzz, and if not replace them with string', () => {
