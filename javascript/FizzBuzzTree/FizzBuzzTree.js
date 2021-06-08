@@ -7,7 +7,7 @@ class Node {
   }
 }
 
-class KAryTree{
+class KaryTree{
   constructor(root = null) {
     this.root = root;
   }
@@ -35,4 +35,4 @@ class KAryTree{
   }
 }
 
-module.exports = { Node, KAryTree };
+module.exports = { Node, KaryTree};
