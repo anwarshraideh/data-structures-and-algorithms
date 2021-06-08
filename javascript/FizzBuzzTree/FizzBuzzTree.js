@@ -26,11 +26,11 @@ class KAryTree{
       }
 
 
-      if (node.children.length) {
-        for (let index = 0; index < node.children.length; index++) {
-          _traverse(node.children[index]);
-        }
+      //   if (node.children.length) {
+      for (let index = 0; index < node.children.length; index++) {
+        _traverse(node.children[index]);
       }
+    //   }
     };
     _traverse(this.root);
   }
