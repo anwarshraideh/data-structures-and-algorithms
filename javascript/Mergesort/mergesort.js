@@ -4,8 +4,6 @@ function mergesort(arr) {
 
   let n = arr.length;
 
-
-
   if (n > 1) {
 
     let mid = Math.floor(arr.length / 2);
