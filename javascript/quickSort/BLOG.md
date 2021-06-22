@@ -45,17 +45,21 @@ Sample array: [8,4,23,42,16,15]
 
 
 STEP 1: let pivot as middle element (23) .
+
 STEP 2: put left pointer on  first  element 8 and right pointer to last element 15 of the array.
+
 STEP 3: Compare element at the left pointer with the pivot element. Since, 8 < 23 shift left pointer to the right to 4 .
+
 STEP 4: 4 < 23 so shift left pointer to one more index to the right. So  23 = 23 stop incrementing the left pointer and now left pointer is at index 2.
+
 STEP 5: Now, compare value at the right pointer with the pivot element. Since 15 < 23 stop moving the right pointer.
+
 STEP 6: Swap both values at left and right pointers with each other and move both pointers one 
+
 STEP 7: Since 16 < 23, Swap both values at left and right pointers with each other. move pointers to one more step .
 
 
 # efficiency
 
-
-Best case senario: Time complexity O(nlogn) / Space Complexity O(n)
-
-Worst case senario: Time complexity O(n^2) / Space Complexity O(n)
+Worst case : Time complexity O(n^2) / Space Complexity O(n)
+Best case : Time complexity O(nlogn) / Space Complexity O(n)
