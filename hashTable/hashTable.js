@@ -1,6 +1,6 @@
 'use strict';
 
-const { LinkedList } = require('../javascript/linked-list/linked-list.js');
+const LinkedList = require('../javascript/linked-list/linked-list.js');
 
 class HashTable {
   constructor(length) {
