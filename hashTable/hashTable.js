@@ -80,9 +80,9 @@ class HashTable {
   }
 }
 
-const hashTable = new HashTable();
-hashTable.add('firstName', 'Ahmad');
-hashTable.add('secondName', 'Mohd');
-hashTable.add('family', 'Test');
+// const hashTable = new HashTable();
+// hashTable.add('firstName', 'Ahmad');
+// hashTable.add('secondName', 'Mohd');
+// hashTable.add('family', 'Test');
 
 module.exports = HashTable;
