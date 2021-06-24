@@ -47,8 +47,7 @@ class HashTable {
     if (!this.table[hash]) {
       this.table[hash] = new LinkedList();
     }
-    this.table[hash].append({ key, value });
-    this.keys[this.keys.length] = key;
+    this.table[hash].add({ key, value });
   }
 
   hash(key) {
@@ -66,14 +65,12 @@ class HashTable {
   }
 
   get(key) {
-    let index = this.hash(key);
-    if (this.contains(key)) {
-      let valuesArr = this.table[index].values();
-      for (let i = 0; i < valuesArr.length; i++) {
-        if (valuesArr[i].key === key) return valuesArr[i];
-      }
+    let hash = this.hash(key);
+    if(!this.table[hash]){
+      return null;
+    }else{
+      return this.table[hash];
     }
-    return null;
   }
 
   contains(key) {
@@ -82,5 +79,10 @@ class HashTable {
     return true;
   }
 }
+
+const hashTable = new HashTable();
+hashTable.add('firstName', 'Ahmad');
+hashTable.add('secondName', 'Mohd');
+hashTable.add('family', 'Test');
 
 module.exports = HashTable;

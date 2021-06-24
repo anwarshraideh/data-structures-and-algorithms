@@ -2,48 +2,49 @@
 
 const HashTable = require('../hashTable.js');
 
-describe('Hash Tables test', () => {
+test('Adding a key/value to your hashtable results in the value being in the data structure', () => {
+  let hashTable = new HashTable();
+  hashTable.add('student', 'anwar');
+  let index = hashTable.hash('student');
+  expect(hashTable.table[index].head.value.key).toEqual('student');
+});
 
-  const hashtable = new HashTable(101);
+test('Retrieving based on a key returns the value stored', () => {
+  let hashTable = new HashTable();
+  hashTable.add('student', 'anwar');
+  const value = hashTable.get('student');
+  expect(value.head.value.key).toEqual('student');
+});
 
-  beforeAll(() => {
-    hashtable.add('daughter', 'anwar');
-    hashtable.add('father', 'haythem');
-    hashtable.add('son', 'ali');
-  });
+test('Successfully returns null for a key that does not exist in the hashtable', () => {
+  let hashTable = new HashTable();
+  // hashTable.add('student', 'anwar');
+  const value = hashTable.get('student');
+  // console.log(value);
+  expect(value).toBeNull();
+});
 
-  it('Adding a key/value to your hashtable results in the value being in the data structure', () => {
-    let table1 = hashtable.table.filter((value) => value !== null);
-    expect(table1.length).toBe(3);
-  });
-  it('Retrieving based on a key returns the value stored', () => {
-    let index = hashtable.hash('daughter');
-    expect(hashtable.table[index].head.value.value).toStrictEqual('anwar');
-  });
-  it('Successfully returns null for a key that does not exist in the hashtable', () => {
-    expect(hashtable.contains('rahaf')).toBeFalsy();
-  });
-  it('Successfully handle a collision within the hashtable', () => {
-    hashtable.add('daughter', 'ghofran');
-    let bucket = hashtable.get('daughter');
-    expect(bucket.value).toEqual('anwar');
-  });
-  it('Successfully retrieve a value from a bucket within the hashtable that has a collision', () => {
-    let index = hashtable.hash('daughter');
-    expect(hashtable.table[index].values()).toEqual([
-      {
-        key: 'daughter',
-        value: 'anwar',
-      },
-      {
-        key: 'daughter',
-        value: 'ghofran',
-      },
-    ]);
-  });
-  it('Successfully handle a collision within the hashtable', () => {
-    let hash = hashtable.hash('welcome');
-    expect(hash).toBeLessThan(101);
+test('Successfully handle a collision within the hashtable', () => {
+  let hashTable = new HashTable();
+  hashTable.add('student', 'anwar');
+  hashTable.add('student', 'ghofran');
+  const value = hashTable.get('student');
+  // console.log(value);
+  expect(value.head.next.value.value).toEqual('ghofran');
+});
 
-  });
+test('Successfully retrieve a value from a bucket within the hashtable that has a collision', () => {
+  let hashTable = new HashTable();
+  hashTable.add('student', 'anwar');
+  hashTable.add('student', 'ghofran');
+  const value = hashTable.get('student');
+  console.log(value.head.next);
+  expect(value.head.next.value.value).toEqual('ghofran');
+});
+
+test('Successfully hash a key to an in-range value', () => {
+  let hashTable = new HashTable();
+  hashTable.add('student', 'anwar');
+  const value = hashTable.hash('student');
+  expect(value).toBeLessThan(50);
 });
