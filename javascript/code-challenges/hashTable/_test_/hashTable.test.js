@@ -2,6 +2,11 @@
 
 const HashTable = require('../hashTable.js');
 
+// const hashTable = new HashTable();
+// hashTable.add('firstName', 'anwar');
+// hashTable.add('secondName', 'haythem');
+// hashTable.add('familyName', 'shraideh');
+
 test('Adding a key/value to your hashtable results in the value being in the data structure', () => {
   let hashTable = new HashTable();
   hashTable.add('student', 'anwar');
@@ -18,9 +23,7 @@ test('Retrieving based on a key returns the value stored', () => {
 
 test('Successfully returns null for a key that does not exist in the hashtable', () => {
   let hashTable = new HashTable();
-  // hashTable.add('student', 'anwar');
   const value = hashTable.get('student');
-  // console.log(value);
   expect(value).toBeNull();
 });
 
@@ -29,7 +32,6 @@ test('Successfully handle a collision within the hashtable', () => {
   hashTable.add('student', 'anwar');
   hashTable.add('student', 'ghofran');
   const value = hashTable.get('student');
-  // console.log(value);
   expect(value.head.next.value.value).toEqual('ghofran');
 });
 

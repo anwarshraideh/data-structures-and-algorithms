@@ -1,6 +1,5 @@
 'use strict';
 
-// const LinkedList = require('../javascript/linked-list/linked-list.js');
 class Node {
   constructor(value) {
     this.value = value;
@@ -80,9 +79,5 @@ class HashTable {
   }
 }
 
-// const hashTable = new HashTable();
-// hashTable.add('firstName', 'Ahmad');
-// hashTable.add('secondName', 'Mohd');
-// hashTable.add('family', 'Test');
 
 module.exports = HashTable;
