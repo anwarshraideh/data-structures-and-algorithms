@@ -1,9 +1,9 @@
 'use strict';
 
-function isRepeated(string) {
+function wordRepeated(str) {
 
-  if (string.length) {
-    let words = string.match(/\w+/g);
+  if (str.length) {
+    let words = str.match(/\w+/g);
     let count = {};
 
     for (let i = 0; i < words.length; i++) {
@@ -23,8 +23,4 @@ function isRepeated(string) {
   }
 }
 
-// let str = 'Once upon a time, there was a brave princess who...';
-
-// isRepeated(str);
-
-module.exports = isRepeated;
+module.exports = wordRepeated;
