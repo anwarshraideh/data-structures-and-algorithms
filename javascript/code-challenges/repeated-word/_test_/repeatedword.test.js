@@ -21,26 +21,32 @@
 
 const isRepeated= require('../repeatedword.js');
 
-test('return the text is unprovided if it was empty string',()=>{
-  let str= '';
+describe('Repeated Word Test', () => {
+  it('return the text is unprovided if it was empty string',()=>{
+    let str= '';
 
-  let expected= isRepeated(str);
+    let expected= isRepeated(str);
 
-  expect(expected).toEqual('No repeated words');
+    expect(expected).toEqual('No repeated words');
+  });
+
+  it('should find the first word to occur more than once in a string',()=>{
+    let str= 'Once upon a time, there was a brave princess who...';
+
+    let expected= isRepeated(str);
+
+    expect(expected).toEqual('a');
+  });
+
 });
 
-test('Happy results (Expected results)',()=>{
-  let str= 'Once upon a time, there was a brave princess who...';
 
-  let expected= isRepeated(str);
 
-  expect(expected).toEqual('a');
-});
 
-test('Exception',()=>{
-  let str= ' ';
+// test('Exception',()=>{
+//   let str= ' ';
 
-  let expected= isRepeated(str);
+//   let expected= isRepeated(str);
 
-  expect(expected).toEqual('Exception');
-});
+//   expect(expected).toEqual('Exception');
+// });
