@@ -4,7 +4,6 @@ const Node = require('../../../tree/node.js');
 const {BinaryTree} = require('../../../tree/tree.js');
 const treeIntersection = require('../hashmaptreeintersection.js');
 
-//===================================
 
 describe('Tree Intersection Test', () => {
 
@@ -33,9 +32,9 @@ describe('Tree Intersection Test', () => {
     fifthNodeArrOne.right = ninthNodeArrOne;
     seventhNodeArrOne.left = tenthNodeArrOne;
     seventhNodeArrOne.right = eleventhNodeArrOne;
-
     tree1 = new BinaryTree(firstNodeArrOne);
-    //=================================
+
+
     const firstNodeArrTwo = new Node(12);
     const secondNodeArrTwo = new Node(25);
     const thirdNodeArrTwo = new Node(420);
@@ -58,10 +57,9 @@ describe('Tree Intersection Test', () => {
     fifthNodeArrTwo.right = ninthNodeArrTwo;
     seventhNodeArrTwo.left = tenthNodeArrTwo;
     seventhNodeArrTwo.right = eleventhNodeArrTwo;
-
     tree2 = new BinaryTree(firstNodeArrTwo);
 
-    //=======================================
+
     const one3 = new Node(1);
     const two3 = new Node(2);
     const three3 = new Node(3);
@@ -78,7 +76,7 @@ describe('Tree Intersection Test', () => {
 
   });
 
-  it('if it can return a set of values intersected in both trees', () => {
+  it('return a set of values intersected in both trees', () => {
     let results = treeIntersection(tree1, tree2);
 
     expect(results.length).toBeGreaterThan(0);
@@ -87,12 +85,13 @@ describe('Tree Intersection Test', () => {
   it('No common values between the trees', () => {
     let results = treeIntersection(tree3, tree4);
 
-    expect(results).toEqual('There is no common values inside the two trees');
+    expect(results).toEqual('no common values inside the two trees');
   });
 
   it('Edge case', () => {
-    let results = treeIntersection(tree4);
+    let results = treeIntersection(tree3);
 
     expect(results).toEqual('Exception');
   });
+
 });
