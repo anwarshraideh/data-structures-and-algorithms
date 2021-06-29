@@ -1,12 +1,12 @@
 'use strict';
-const HashTable = require('../hashTable/hashTable.js');
+// const HashTable = require('../hashTable/hashTable.js');
 
-const hashTable1 = new HashTable();
-const hashTable2 = new HashTable();
-hashTable1.add('firstName', 'Ahmad');
-hashTable1.add('secondName', 'Mohd');
-hashTable2.add('secondName', 'Test');
-hashTable2.add('thirdName', 'Samer');
+// const hashTable1 = new HashTable();
+// const hashTable2 = new HashTable();
+// hashTable1.add('firstName', 'Ahmad');
+// hashTable1.add('secondName', 'Mohd');
+// hashTable2.add('secondName', 'Test');
+// hashTable2.add('thirdName', 'Samer');
 
 
 function leftJoin(leftHash, rightHash) {
