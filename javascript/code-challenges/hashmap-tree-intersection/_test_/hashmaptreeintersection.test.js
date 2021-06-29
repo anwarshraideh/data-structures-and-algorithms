@@ -1,7 +1,7 @@
 'use strict';
 
 const Node = require('../../../tree/node.js');
-const BinaryTree = require('../../../tree/tree.js');
+const {BinaryTree} = require('../../../tree/tree.js');
 const treeIntersection = require('../hashmaptreeintersection.js');
 
 //===================================
