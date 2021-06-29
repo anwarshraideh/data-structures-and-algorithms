@@ -1,20 +1,33 @@
-const leftJion =require('../hashmap-left-join.js');
-const HashTable = require('../hashTable/hashTable.js');
-let table1 = new HashTable(1024);
-let table2 = new HashTable(1024);
+'Use strict';
+
+function leftJoin(table1, table2) {
+
+  let result = [];
+
+  for (let i = 0; i <= table1.table.length - 1; i++) {
+    if (table1.table[i]) {
+      let key = [Object.keys(table1.table[i].head.value)[0]][0];
+      let value = [Object.values(table1.table[i].head.value)[0]][0];
+      result.push([key, value]);
 
 
-describe('Take Size of Table', () => {
-  it('should create a hashed table', () => {
-    table1.set('ghofran', 'Ahmad');
-    table2.set('ghofran', 'dayyat');
-    table1.set('ghofran', 'dayyat');
+      if (table1.table[i].head.next) {
+        let current = table1.table[i].head.next;
 
-    table1.set('samr', 'Ahmad');
-    table2.set('samr', 'dayyat');
+        while (current) {
+          let key = Object.keys(current.value)[0];
+          let value = Object.values(current.value)[0];
+          result.push([key, value]);
+          current = current.next;
+        }
+      }
+    }
+  }
+  for (let j = 0; j <= result.length - 1; j++) {
+    let join = table2.get(result[j][0]);
+    result[j].push(join);
+  }
+  return result.length === 0 ? null : result;
+}
 
-    console.log(table1);
-    console.log(leftJion(table1,table2));
-    expect(leftJion(table1,table2)).toEqual([ [ 'samr', 'Ahmad', 'dayyat' ], [ 'ghofran', 'Ahmad', 'dayyat' ] ]);
-  });
-});
+module.exports = leftJoin;
