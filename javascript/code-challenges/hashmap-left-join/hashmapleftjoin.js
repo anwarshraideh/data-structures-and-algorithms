@@ -1,42 +1,20 @@
-'use strict';
-// const HashTable = require('../hashTable/hashTable.js');
-
-// const hashTable1 = new HashTable();
-// const hashTable2 = new HashTable();
-// hashTable1.add('firstName', 'Ahmad');
-// hashTable1.add('secondName', 'Mohd');
-// hashTable2.add('secondName', 'Test');
-// hashTable2.add('thirdName', 'Samer');
+const leftJion =require('../hashmap-left-join.js');
+const HashTable = require('../hashTable/hashTable.js');
+let table1 = new HashTable(1024);
+let table2 = new HashTable(1024);
 
 
-function leftJoin(leftHash, rightHash) {
-  if((leftHash && !rightHash) || (!leftHash && rightHash)) {
-    return 'Exception';
-  }
+describe('Take Size of Table', () => {
+  it('should create a hashed table', () => {
+    table1.set('ghofran', 'Ahmad');
+    table2.set('ghofran', 'dayyat');
+    table1.set('ghofran', 'dayyat');
 
-  if(Object.keys(leftHash.table).length === 0) {
-    return 'Please pass a full hash table';
-  }
-  let output = [];
+    table1.set('samr', 'Ahmad');
+    table2.set('samr', 'dayyat');
 
-  for (let i = 0; i < Object.keys(leftHash.table).length; i++) {
-
-    let leftKey = Object.values(leftHash.table)[i].head.value.key;
-    let leftValue = Object.values(leftHash.table)[i].head.value.value;
-
-    for (let j = 0; j < Object.keys(rightHash.table).length; j++) {
-      let rightKey = Object.values(rightHash.table)[j].head.value.key;
-      let rightValue = Object.values(rightHash.table)[j].head.value.value;
-      if(leftKey === rightKey) {
-        output.push([leftKey, leftValue, rightValue]);
-        break;
-      } else if (j === Object.keys(rightHash.table).length - 1) {
-        output.push([leftKey, leftValue, null]);
-      }
-    }
-  }
-  return output;
-}
-
-module.exports = leftJoin;
-
+    console.log(table1);
+    console.log(leftJion(table1,table2));
+    expect(leftJion(table1,table2)).toEqual([ [ 'samr', 'Ahmad', 'dayyat' ], [ 'ghofran', 'Ahmad', 'dayyat' ] ]);
+  });
+});

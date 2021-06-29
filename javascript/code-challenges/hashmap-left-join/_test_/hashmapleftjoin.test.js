@@ -1,48 +1,23 @@
-'use strict';
+const hashTable = require('../../hashTable/hashTable.js');
 
-const HashTable = require('../../hashTable/hashTable');
-const leftJoin = require('../hashmapleftjoin');
 
-const hashTable1 = new HashTable();
-const hashTable2 = new HashTable();
-hashTable1.add('firstName', 'Ahmad');
-hashTable1.add('secondName', 'Mohd');
-hashTable2.add('secondName', 'Test');
-hashTable2.add('thirdName', 'Samer');
 
-test('Happy path', () => {
-  const hashTable1 = new HashTable();
-  const hashTable2 = new HashTable();
-  hashTable1.add('firstName', 'Ahmad');
-  hashTable1.add('secondName', 'Mohd');
-  hashTable2.add('secondName', 'Test');
-  hashTable2.add('thirdName', 'Samer');
+module.exports= function leftJion(table1 , table2){
+  let resultArr=[];
+  for (let i = 0; i <= table1.table.length - 1; i++) {
+    if (table1.table[i]) {
+      console.log(table1.table[i]);
+      let key1 = [Object.keys(table1.table[i].head.value)[0] ] [0];
+      let key2 = [Object.keys(table2.table[i].head.value)[0] ] [0];
+      let v1 = [Object.values(table1.table[i].head.value)[0] ] [0];
+      let v2 = [Object.values(table2.table[i].head.value)[0] ] [0];
+      if(key1===key2){
+        let packet =[key1,v1,v2];
+        resultArr.push(packet);
+      }
+    }
+  }
 
-  expect(leftJoin(hashTable1, hashTable2)).toEqual([
-    ['firstName', 'Ahmad', null],
-    ['secondName', 'Mohd', 'Test'],
-  ]);
-});
+  return resultArr;
 
-test('Edge case', () => {
-  const hashTable1 = new HashTable();
-  const hashTable2 = new HashTable();
-  hashTable1.add('firstName', 'Ahmad');
-  hashTable1.add('secondName', 'Mohd');
-  hashTable2.add('secondName', 'Test');
-  hashTable2.add('thirdName', 'Samer');
-
-  expect(leftJoin(hashTable1)).toEqual('Exception');
-});
-
-// test('Exception', () => {
-//   const hashTable1 = new HashTable();
-//   const hashTable2 = new HashTable();
-//   hashTable2.add('secondName', 'Test');
-//   hashTable2.add('thirdName', 'Samer');
-
-//   expect(leftJoin(hashTable1, hashTable2)).toEqual(
-//     'Please pass a full hash table'
-//   );
-// });
-
+};
