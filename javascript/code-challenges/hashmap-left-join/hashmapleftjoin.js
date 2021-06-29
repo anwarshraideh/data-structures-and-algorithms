@@ -1,5 +1,5 @@
-
-const HashTable = require('../../hashTable/hashTable.js');
+'use strict';
+const HashTable = require('../hashTable/hashTable.js');
 
 const hashTable1 = new HashTable();
 const hashTable2 = new HashTable();
