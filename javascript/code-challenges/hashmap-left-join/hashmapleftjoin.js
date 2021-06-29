@@ -1,38 +1,42 @@
-'Use strict';
 
-function leftJoin(table1, table2) {
+const HashTable = require('../../hashTable/hashTable.js');
+
+const hashTable1 = new HashTable();
+const hashTable2 = new HashTable();
+hashTable1.add('firstName', 'Ahmad');
+hashTable1.add('secondName', 'Mohd');
+hashTable2.add('secondName', 'Test');
+hashTable2.add('thirdName', 'Samer');
 
 
-  if((table1 && !table2) || (!table1 && table2)) {
+function leftJoin(leftHash, rightHash) {
+  if((leftHash && !rightHash) || (!leftHash && rightHash)) {
     return 'Exception';
   }
 
+  if(Object.keys(leftHash.table).length === 0) {
+    return 'Please pass a full hash table';
+  }
   let output = [];
 
-  for (let i = 0; i <= table1.table.length - 1; i++) {
-    if (table1.table[i]) {
-      let key = [Object.keys(table1.table[i].head.value)[0]][0];
-      let value = [Object.values(table1.table[i].head.value)[0]][0];
-      output.push([key, value]);
+  for (let i = 0; i < Object.keys(leftHash.table).length; i++) {
 
-      if (table1.table[i].head.next) {
-        let current = table1.table[i].head.next;
+    let leftKey = Object.values(leftHash.table)[i].head.value.key;
+    let leftValue = Object.values(leftHash.table)[i].head.value.value;
 
-        while (current) {
-          let key = Object.keys(current.value)[0];
-          let value = Object.values(current.value)[0];
-          output.push([key, value]);
-          current = current.next;
-        }
+    for (let j = 0; j < Object.keys(rightHash.table).length; j++) {
+      let rightKey = Object.values(rightHash.table)[j].head.value.key;
+      let rightValue = Object.values(rightHash.table)[j].head.value.value;
+      if(leftKey === rightKey) {
+        output.push([leftKey, leftValue, rightValue]);
+        break;
+      } else if (j === Object.keys(rightHash.table).length - 1) {
+        output.push([leftKey, leftValue, null]);
       }
     }
   }
-
-  for (let j = 0; j <= output.length - 1; j++) {
-    let join = table2.get(output[j][0]);
-    output[j].push(join);
-  }
-  return output.length === 0 ? null : output;
+  return output;
 }
 
 module.exports = leftJoin;
+
