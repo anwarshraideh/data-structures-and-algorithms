@@ -1,6 +1,6 @@
 'use strict';
 
-const {HashTable} = require('../../hashTable/hashTable.js');
+const HashTable = require('../../hashTable/hashTable.js');
 const {leftJoin} = require('../hashmapleftjoin.js');
 
 
@@ -9,6 +9,7 @@ describe('leftJoin ', () => {
   let hashTable1;
   let hashTable2;
   beforeEach(() => {
+
     hashTable1 = new HashTable(1024);
     hashTable2 = new HashTable(1024);
 
