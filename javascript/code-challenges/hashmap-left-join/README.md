@@ -12,6 +12,6 @@ The second parameter is a hashmap that has word strings as keys, and antonyms of
 Return: The returned data structure that holds the results is up to you. It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic
 
 # Approach & Efficiency
-Big O: time: O(n^2) space: O(1)
+Big O: time: O(n) space: O(n)
 
-![cc33](../../../images/)
+![cc33](../../../images/cc33.png)
