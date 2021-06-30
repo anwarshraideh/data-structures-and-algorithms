@@ -1,33 +1,46 @@
-'Use strict';
+'use strict';
 
-function leftJoin(table1, table2) {
+// const {HashTable} = require('../hashTable/hash-table');
 
-  let result = [];
+function leftJoin(hashTable1, hashTable2) {
+  const leftJoinResult = [];
 
-  for (let i = 0; i <= table1.table.length - 1; i++) {
-    if (table1.table[i]) {
-      let key = [Object.keys(table1.table[i].head.value)[0]][0];
-      let value = [Object.values(table1.table[i].head.value)[0]][0];
-      result.push([key, value]);
+  hashTable1.table.forEach(bucket => {
+    if (bucket) {
+      let currentNode = bucket.head;
 
+      while (currentNode) {
 
-      if (table1.table[i].head.next) {
-        let current = table1.table[i].head.next;
+        let key = Object.keys(currentNode.value)[0];
+        //   leftJoinObj[key] = [bucket.root.value[key]];
+        let value1 = Object.values(currentNode.value)[0];
+        let value2 = null;
 
-        while (current) {
-          let key = Object.keys(current.value)[0];
-          let value = Object.values(current.value)[0];
-          result.push([key, value]);
-          current = current.next;
-        }
+        if (hashTable2.contains(key)) value2 = hashTable2.get(key);
+
+        leftJoinResult.push([key, value1, value2]);
+
+        currentNode = currentNode.next;
+
       }
     }
-  }
-  for (let j = 0; j <= result.length - 1; j++) {
-    let join = table2.get(result[j][0]);
-    result[j].push(join);
-  }
-  return result.length === 0 ? null : result;
+
+  });
+  return leftJoinResult;
 }
 
-module.exports = leftJoin;
+//   hashTable2.table.forEach(bucket => {
+//     if (bucket) {
+//       let key = Object.keys(bucket.root.value)[0];
+//       if (leftJoinObj[key]) {
+//         leftJoinObj[key].push(bucket.root.value[key]);
+//       }
+//     }
+//   });
+
+
+// console.log(leftJoin(hashTable1, hashTable2));
+
+module.exports = {
+  leftJoin ,
+};
