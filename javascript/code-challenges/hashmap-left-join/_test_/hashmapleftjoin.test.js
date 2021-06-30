@@ -26,13 +26,13 @@ describe('leftJoin 👈👈👈👈', () => {
   });
 
   test('🟢 works just fine 🟢', () => {
-    let expected = {
-      wrath: [ 'anger', 'delight' ],
-      outfit: [ 'garb' ],
-      diligent: [ 'employed', 'idle' ],
-      guide: [ 'usher', 'follow' ],
-      fond: [ 'enamored', 'averse' ]
-    };
+    let expected = [
+      ['fond', 'enamored', 'averse'],
+      ['outfit', 'garb', null],
+      ['diligent', 'employed', 'idle'],
+      ['guide', 'usher', 'follow'],
+      ['wrath', 'anger', 'delight'],
+    ];
     expect(leftJoin(hashTable1, hashTable2)).toEqual(expected);
   });
 
