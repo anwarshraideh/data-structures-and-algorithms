@@ -4,7 +4,7 @@ const HashTable = require('../../hashTable/hashTable.js');
 const {leftJoin} = require('../hashmapleftjoin.js');
 
 
-describe('leftJoin 👈👈👈👈', () => {
+describe('leftJoin ', () => {
 
   let hashTable1;
   let hashTable2;
@@ -25,24 +25,17 @@ describe('leftJoin 👈👈👈👈', () => {
     hashTable2.add('flow', 'jam');
   });
 
-  test('🟢 works just fine 🟢', () => {
-    let expected = [
-      ['fond', 'enamored', 'averse'],
-      ['outfit', 'garb', null],
-      ['diligent', 'employed', 'idle'],
-      ['guide', 'usher', 'follow'],
-      ['wrath', 'anger', 'delight'],
-    ];
+  test(' successful  ', () => {
+    // let expected = [
+    //   ['fond', 'enamored', 'averse'],
+    //   ['outfit', 'garb', null],
+    //   ['diligent', 'employed', 'idle'],
+    //   ['guide', 'usher', 'follow'],
+    //   ['wrath', 'anger', 'delight'],
+    // ];
     const result = leftJoin(hashTable1, hashTable2);
-    //Assert
     expect(result.length).toBe(5);
 
-    // result.forEach((item, i) => {
-    //   expect(item.length).toBe(3);
-    //   expect(item).toEqual(expected[i]);
-
-
-    // });
   });
 
   test('Does not add non-corresponding key from second table', () => {
@@ -50,13 +43,6 @@ describe('leftJoin 👈👈👈👈', () => {
     expect(result.flow).toBeFalsy();
   });
 
-  // result looks like this
-  // {
-  //   wrath: [ 'anger', 'delight' ],
-  //   outfit: [ 'garb' ],
-  //   diligent: [ 'employed', 'idle' ],
-  //   guide: [ 'usher', 'follow' ],
-  //   fond: [ 'enamored', 'averse' ]
-  // }
+
 
 });
