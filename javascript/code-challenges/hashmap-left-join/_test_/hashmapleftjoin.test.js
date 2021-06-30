@@ -13,17 +13,17 @@ describe('leftJoin ', () => {
     hashTable1 = new HashTable(1024);
     hashTable2 = new HashTable(1024);
 
-    hashTable1.set('fond', 'enamored');
-    hashTable1.set('wrath', 'anger');
-    hashTable1.set('diligent', 'employed');
-    hashTable1.set('outfit', 'garb');
-    hashTable1.set('guide', 'usher');
+    hashTable1.add('fond', 'enamored');
+    hashTable1.add('wrath', 'anger');
+    hashTable1.add('diligent', 'employed');
+    hashTable1.add('outfit', 'garb');
+    hashTable1.add('guide', 'usher');
 
-    hashTable2.set('fond', 'averse');
-    hashTable2.set('wrath', 'delight');
-    hashTable2.set('diligent', 'idle');
-    hashTable2.set('guide', 'follow');
-    hashTable2.set('flow', 'jam');
+    hashTable2.add('fond', 'averse');
+    hashTable2.add('wrath', 'delight');
+    hashTable2.add('diligent', 'idle');
+    hashTable2.add('guide', 'follow');
+    hashTable2.add('flow', 'jam');
   });
 
   test(' works just fine ', () => {
