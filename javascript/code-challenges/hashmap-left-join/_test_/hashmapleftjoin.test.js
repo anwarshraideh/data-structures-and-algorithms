@@ -33,7 +33,16 @@ describe('leftJoin 👈👈👈👈', () => {
       ['guide', 'usher', 'follow'],
       ['wrath', 'anger', 'delight'],
     ];
-    expect(leftJoin(hashTable1, hashTable2)).toEqual(expected);
+    const result = leftJoin(hashTable1, hashTable2);
+    //Assert
+    expect(result.length).toBe(5);
+
+    result.forEach((item, i) => {
+      expect(item.length).toBe(3);
+      expect(item).toEqual(expected[i]);
+
+
+    });
   });
 
   test('Does not add non-corresponding key from second table', () => {
